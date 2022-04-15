@@ -167,15 +167,13 @@ main{
 .algunostrabajos .columna33 img{
     height: 300px;
 }
-#imagenindex{
+.imagenindex{
     margin-top: 10px;
     margin-right: 25px;
     border-radius: 15px;
-    height: 500px;
+    
 }
-aside{
-    width: 700px;
-}
+
 
 /*FOOTER*/
 footer{
@@ -349,18 +347,20 @@ footer .columnaredes ul li{
     display: flex;
     margin-top: 15px;   
 }
-.serviciosSection img{
-    height: 100vh;
-}
-.serviciosSection p, h2{
-    margin: 30px 25px;
-}
+
 
 
 
 
 /* mediaquerys */
 @media only screen and (min-width:1024px){
+    /* INDEX */
+    .imagenindex{
+        height: 500px;
+    }
+    aside{
+        width: 50%;
+    }
     /* seccion Galeria */
     .gridGaleria { 
         display: grid;
@@ -379,8 +379,24 @@ footer .columnaredes ul li{
     .hamb{
         display: none;
     }
+    /* SERVIVIOS */
+    .serviciosSection img{
+        height: 100vh;
+        max-width: 70%;
+    }
+    .serviciosSection p, h2{
+        margin: 30px 25px;
+    }
+    
 }
 @media only screen and (min-width:767px) and (max-width:1023px){
+     /* INDEX */
+     .imagenindex{
+        width: 45%;
+    }
+    aside{
+        width: 45%;
+    }
     /* Galeria */
     .gridGaleria {
         display: grid; 
@@ -416,8 +432,24 @@ footer .columnaredes ul li{
     .hamb{
         display: none;
     }
+    /* SERVICIOS */
+    .serviciosSection img{
+        height: 100vh;
+        max-width: 70%;
+    }
+    .serviciosSection p, h2{
+        margin: 30px 25px;
+    }
 }
 @media only screen and (min-width:480px) and (max-width:766px){
+     /* INDEX */
+     .imagenindex{
+        width: 45%;
+    }
+    aside{
+        width: 45%;
+    }
+    /* MEDIA GALERIA */
     .gridGaleria{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -433,6 +465,46 @@ footer .columnaredes ul li{
     }
     .img{
         background-size: cover;
+    }
+    /* MEDIA SERVICIOS */
+    #talleres{
+        height: 100vh;
+        background-image: url(../img/taller.jpeg);
+        background-position: center;
+        background-size: cover;
+        
+    }
+    #pedidos{
+        height: 100vh;
+        background-image: url(../img/perros4.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    #acrilicos{
+        height: 100vh;
+        background-image: url(../img/acrilico.jpeg);
+        background-position: center;
+        background-size: cover;
+        filter:contrast(100%);
+    }
+    #mates{
+        height: 100vh;
+        background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0) 70% ),url(../img/mates.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    #estampitas{
+        height: 100vh;
+        /* background-image: url(../img/estampitas.jpeg); */
+
+        background-size: cover;
+        background-image: linear-gradient( rgba(255, 255, 255, .5),rgba(255, 255, 255, 0) 80% ), url(../img/estampitas.jpeg);
+    }
+    .serviciosSection img{
+        display: none;
+    }
+    .serviciosSection p,h2{
+        background-color: rgba(255,255,255,.2);  
     }
 
       /* footer pantallas chicas */
@@ -478,6 +550,31 @@ footer .columnaredes ul li{
 
 }
 @media only screen and (max-width:478px){
+     /* INDEX */
+     .imagenindex{
+        position: absolute;
+        z-index: -1;
+        filter:  contrast(60%);
+        width: 100%;
+        border-radius: 0;
+    }
+    aside{
+    }
+    .algunostrabajos{
+        background-color: rgb(245, 238, 238);
+    }
+    .algunostrabajos .row{
+        display: block;
+    }
+    .algunostrabajos .row .columna33{
+        width: 100%;
+    }
+    .algunostrabajos .row .columna33 img{
+        width: 100%;
+    }
+
+
+    
     main{
         width: 100%;
         padding: 0;
@@ -522,5 +619,44 @@ footer .columnaredes ul li{
     }
     .contactoLinea{
         display:contents;
+    }
+
+     /* MEDIA SERVICIOS */
+    #talleres{
+        height: 100vh;
+        background-image: url(../img/taller.jpeg);
+        background-position: center;
+        background-size: cover;
+            
+    }
+    #pedidos{
+        height: 100vh;
+        background-image: url(../img/perros4.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    #acrilicos{
+        height: 100vh;
+        background-image: url(../img/acrilico.jpeg);
+        background-position: center;
+        background-size: cover;
+        filter:contrast(100%);
+    }
+    #mates{
+        height: 100vh;
+        background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0) 70% ),url(../img/mates.jpg);
+        background-position: center;
+        background-size: cover;
+        }
+    #estampitas{
+        height: 100vh;
+        background-size: cover;
+        background-image: linear-gradient( rgba(255, 255, 255, .5),rgba(255, 255, 255, 0) 80% ), url(../img/estampitas.jpeg);
+        }
+    .serviciosSection img{
+        display: none;
+    }
+    .serviciosSection p, .serviciosSection h2{
+        background-color: rgba(255,255,255,.2);  
     }
 }

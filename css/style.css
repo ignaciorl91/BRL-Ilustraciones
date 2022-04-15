@@ -1,0 +1,526 @@
+*{
+    box-sizing:border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+header {
+    background-image: url(../img/colores.jpg);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;
+    position: relative;
+}
+header img{
+    margin-left: 15px;
+    width: 200px;
+}
+header .menu{
+    margin-right: 0px;
+    z-index: 2;
+}
+.menu ul{
+    display: flex;
+    margin-right: 10px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 1px 15px 1px;
+    border-radius: 15px;
+    background-color: rgba(6, 58, 22);
+    margin-left: 6px;
+    /* margin-right: 5px; */
+    font-weight: 500;
+    z-index: 2;
+}
+header a:hover{
+    background-color: rgb(53, 121, 106);
+    color: rgb(14, 15, 15);
+    transition: all 0.4s;
+}
+body{
+    background-color: rgb(245, 238, 238);
+    margin: 0;
+    font-family: "catamaran";
+}
+/*Personalizacion de scrollbar*/
+body::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(53, 121, 106, .2);
+    }
+body::-webkit-scrollbar-thumb{
+    background:  rgba(6, 58, 22, .5);
+    border-radius: 100px;
+}
+
+/*boton para volver arriba*/
+#goUp{
+    position: fixed;
+    top: 10px;
+    right:10px;
+    background-image: url(../img/favicon.png);
+    background-size:cover;
+    border-radius: 30%;
+    width: 50px;
+    height:54px;
+    z-index: 1;
+}
+#goUp h2{
+    text-align: center  ;
+    margin: 0;
+    padding-top: 10px;
+    
+}
+#goUp a{
+    text-decoration: none;
+    color:rgb(255, 255, 255)
+}
+
+main{
+    margin: 10px 10px;
+}
+
+
+
+/*Pagina Contacto */
+.fieldsetContacto{
+    width: 70%;
+    margin: 15px 15% 15px 15%;
+    
+}
+.formContacto{
+    padding: 5px 10px;
+}
+.contactoLinea{
+    display: flex;
+    margin-bottom: 10px;
+}
+.contactoLinea2{
+    /* display: flex; */
+    margin-bottom: 10px;
+}
+.formContacto  label{
+    padding: 5px 10px;
+}
+.formContacto .contactoLinea label{
+    display: block;
+    width: 15%;
+    padding: 5px 10px;
+}
+
+.formContacto .contactoLinea input{
+    display: block;
+    width: 40%;    
+    padding: 5px 50px;
+    margin: 5px;
+}
+.formContacto textarea{
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+    height: 100px;
+}
+.mapa{
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+
+/*dentro de esta clase estan las columnas de distintos porcentajes (25%, 33% y 50%)*/
+.row{
+    display: flex;
+    flex-wrap: wrap;   
+    box-sizing: border-box;
+    width: 100%;
+}   
+/* define columnas de determinado % de pantalla, se ubican en div row */
+.columna25{
+    width: 24.2%;
+    padding: 5px 5px;
+}   
+.columna33{
+    width: 33.3%;
+    text-align: center;;
+}
+.columna50{
+    width: 50%;
+}
+.columna50 img{
+    width: 100%;
+}
+/*Pagina index*/
+.algunostrabajos .columna33 img{
+    height: 300px;
+}
+#imagenindex{
+    margin-top: 10px;
+    margin-right: 25px;
+    border-radius: 15px;
+    height: 500px;
+}
+aside{
+    width: 700px;
+}
+
+/*FOOTER*/
+footer{
+    background-color: darkslategrey;
+    color: white;
+    width: 100%;
+    justify-items: center;
+}
+footer .row{
+    align-items: center;
+    padding: 10px;
+}
+footer .logofooter img{
+    width: 30vh;
+}
+footer .columnaredes a{
+    text-decoration: none;
+    font-size: 50px;
+    color:rgb(255, 255, 255);   
+}
+footer a{
+    color:rgb(255, 255, 255);   
+    transition: 0.5s;
+}
+footer a:hover{
+    color:  black;
+    transition: 0.5s;
+}
+footer ul li{
+    padding: 10px 0 10px 0;
+}
+footer .columnaredes ul{
+    display: flex;  
+    flex-wrap: wrap;
+}
+footer .columnaredes ul li{
+    padding: 15px;
+}
+
+/*Pagina Galeria*/
+.img{
+        border:1px solid black;
+        margin: 5px;
+        transition: all 0.7s;
+        border-radius: 10px;
+}
+.img:hover{
+    transform: scale(1.1);
+    transition: all 0.7s;
+}
+    
+.img1 { 
+        grid-area: caballo; 
+        background-image: url(../img/caballo1.png);
+        background-size: contain;
+        background-position: center;
+}
+    
+.img2 { 
+    grid-area: perro1; 
+    background-image: url(../img/perro11.png);
+    background-size: cover;
+    background-position: center;
+}  
+.img3 { 
+    grid-area: perro2; 
+    background-image: url(../img/Perro12.png);
+    background-size: cover;
+    background-position: center;
+}
+  
+.img4 { 
+    grid-area: castillo;
+    background-image: url(../img/castillo1.png);
+    background-size: cover;
+    background-position: 0px -30px;
+}
+  
+.img5 { 
+    grid-area: casa;
+    background-image: url(../img/casa1.png); 
+    background-size:contain;
+    background-position: center;
+}
+  
+.img6 {
+     grid-area: estacion; 
+     background-image: url(../img/estacion1.png);
+     background-size:contain;
+     background-position: center;
+}
+  
+.img7 {
+     grid-area: mural;
+     background-image: url(../img/mural.jpg);
+     background-size: cover;
+     background-position: center;
+}
+  
+.img8 {
+     grid-area: BsAs;
+     background-image: url(../img/Buenos\ Aires\ PSD\ sRGB.jpg);
+     background-size: cover;
+     background-position: center;   
+}
+.img9 { 
+    grid-area: cancha1; 
+    background-image: url(../img/banfield.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img10 {
+     grid-area: cancha2; 
+     background-image: url(../img/BOCA\ en\ A4.jpg);
+     background-size: cover;
+     background-position: center;
+}
+.img11 { 
+    grid-area: velero; 
+    background-image: url(../img/velero1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img12 {
+     grid-area: cancha3; 
+     background-image: url(../img/river\ 2021.jpg);
+     background-size: cover;
+     background-position: center;
+}
+.img13 {
+     grid-area: cancha4; 
+     background-image: url(../img/San\ Lorenzo.jpg);
+     background-size: cover;
+     background-position: center;
+}
+.img14 {
+     grid-area: scooter; 
+     background-image: url(../img/scooter.jpg);
+     background-size: cover;
+     background-position: center;
+}
+  
+
+
+
+
+/*PAGINA SERVICIOS*/
+.serv{
+    position: relative;
+    height: 150px;
+    margin: 8px 15px;
+    filter: grayscale(70%);
+    border: 3px transparent;
+ }
+.serv:hover{
+    filter: grayscale(00%);
+    border: black solid 3px;
+}
+.serv h3{
+    align-items:center;
+
+    text-align: center;
+}
+.serv img{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    height: 100%;
+}
+.serviciosSection{
+    display: flex;
+    margin-top: 15px;   
+}
+.serviciosSection img{
+    height: 100vh;
+}
+.serviciosSection p, h2{
+    margin: 30px 25px;
+}
+
+
+
+
+/* mediaquerys */
+@media only screen and (min-width:1024px){
+    /* seccion Galeria */
+    .gridGaleria { 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 400px 300px 350px 300px 300px;
+        gap: 6px 6px;
+        grid-auto-flow: row;
+        grid-template-areas: 
+        "perro1 perro2 caballo caballo"
+          "castillo castillo casa estacion"
+          "mural BsAs BsAs BsAs"
+          "mural cancha1 cancha2 velero"
+          "scooter cancha3 cancha4 velero";     
+        }
+    /* header */
+    .hamb{
+        display: none;
+    }
+}
+@media only screen and (min-width:767px) and (max-width:1023px){
+    /* Galeria */
+    .gridGaleria {
+        display: grid; 
+        /* grid-auto-columns: 1fr;   */
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 300px 300px 300px 300px 300px; 
+        gap: 6px 6px; 
+        grid-template-areas: 
+          "perro1 perro2 caballo"
+          "castillo casa estacion"
+          "mural BsAs BsAs"
+          "mural scooter cancha1"
+          "cancha2 cancha3 cancha4"; 
+      }
+      .img{
+          background-size: cover;
+      }
+      /* footer */
+    footer .logofooter img{
+        width: 20vh;
+      }
+    footer .columnaredes a{
+        font-size: 35px;
+    }
+    footer .columnaredes {
+        padding: auto;
+    }
+    footer .columna33 li{
+        font-size: 15px;
+    }
+
+    /* header */
+    .hamb{
+        display: none;
+    }
+}
+@media only screen and (min-width:480px) and (max-width:766px){
+    .gridGaleria{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(7, 50vh);
+        grid-template-areas:
+         "perro1 perro2"
+         "caballo castillo"
+         "casa estacion"
+         "BsAs BsAs"
+         "mural scooter"
+         "mural cancha1"
+         "cancha2 cancha3";
+    }
+    .img{
+        background-size: cover;
+    }
+
+      /* footer pantallas chicas */
+      footer .row{
+        display: block;
+    }
+    footer .columna33{
+        width: 100%;
+        justify-content: center;
+    }
+    footer .columna33 ul{
+        justify-content: center;
+        padding: 0;
+    }
+
+    /* header */
+    .hamb{
+        margin-right: 16px;
+    }
+   
+    .menu{
+        position: absolute;
+        right: 110%;
+        /* display: none; */
+    }
+
+    /* CONTACTO */
+    .fieldsetContacto{
+        width: 90%;
+        margin: auto;
+        padding: 3px;
+    }
+    .formContacto{
+        padding: 0;
+    }
+    .contactoLinea input{
+        flex-shrink: 3;
+    }
+    .contactoLinea label{
+        flex-shrink:2;
+    }
+
+
+}
+@media only screen and (max-width:478px){
+    main{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .gridGaleria{
+        /* grid-template-columns: 1fr; */
+        /* row-gap: 10px; */
+        margin: 0;
+    }
+    .img{
+        min-height: 40vh;
+     }
+      /* footer pantallas chicas */
+    footer .row{
+        display: block;
+    }
+    footer .columna33{
+        width: 100%;
+        justify-content: center;
+    }
+    footer .columna33 ul{
+        justify-content: center;
+        padding: 0;
+    }
+
+      /* header */
+      .menu{
+        display: none;
+    }
+
+    /* contacto */
+    .fieldsetContacto{
+        width: 95%;
+        margin: auto;
+    }
+    .formContacto{  
+        width: 100%;
+    }
+    .formContacto .contactoLinea input{
+        width: 100%;
+    }
+    .contactoLinea{
+        display:contents;
+    }
+}

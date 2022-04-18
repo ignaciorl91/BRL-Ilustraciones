@@ -12,7 +12,7 @@ html{
 }
 
 header {
-    background-image: url(../img/colores.jpg);
+    background-image:linear-gradient(  rgba(245, 238, 238,0),rgba(245, 238, 238, .9)  ), url(../img/colores.jpg);
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -379,6 +379,9 @@ footer .columnaredes ul li{
     .hamb{
         display: none;
     }
+    .Xmenu{
+        display: none;
+    }
     /* SERVIVIOS */
     .serviciosSection img{
         height: 100vh;
@@ -396,6 +399,13 @@ footer .columnaredes ul li{
     }
     aside{
         width: 45%;
+    }
+    .columna33{
+        width: calc(33%);
+        overflow:hidden;
+    }
+    .algunostrabajos .columna33 img{
+        width: 100%;
     }
     /* Galeria */
     .gridGaleria {
@@ -432,6 +442,9 @@ footer .columnaredes ul li{
     .hamb{
         display: none;
     }
+    .Xmenu{
+        display: none;
+    }
     /* SERVICIOS */
     .serviciosSection img{
         height: 100vh;
@@ -448,6 +461,16 @@ footer .columnaredes ul li{
     }
     aside{
         width: 45%;
+    }
+    .columna33{
+        width: calc(33%);
+        overflow:hidden;
+    }
+    .algunostrabajos .columna33 img{
+        width: 100%;
+    }
+    .algunostrabajos .columna33 blockquote{
+        /* width: 100%; */
     }
     /* MEDIA GALERIA */
     .gridGaleria{
@@ -526,9 +549,35 @@ footer .columnaredes ul li{
     }
    
     .menu{
-        position: absolute;
-        right: 110%;
-        /* display: none; */
+        position: fixed;
+        width: 220px;
+        height: 100%;
+        background-color: white;
+        padding-top: 20px;
+        top:0;
+        right: 0;
+        transition: all 1.8s ease;
+        transform: translateX(100%);
+    }
+   
+    header .menu .Xmenu {
+        padding-left: 70%;
+    }
+    header .menu .Xmenu a {
+        color: black;
+        background-color: transparent;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu ul li{
+        padding-bottom: 20px;
+    }
+    .menu ul li a{
+        background-color: transparent;
+        color: black;
+        /* border-top: solid 1px black;     */
+        border-bottom: solid 1px black;    
     }
 
     /* CONTACTO */

@@ -215,11 +215,19 @@ footer .columnaredes ul li{
 
 /*Pagina Galeria*/
 .img{
-        border:1px solid black;
-        margin: 5px;
-        transition: all 0.7s;
-        border-radius: 10px;
+    border:1px solid black;
+    margin: 5px;
+    transition: all 0.7s;
+    border-radius: 10px;
+
+
 }
+.img img{
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
 .img:hover{
     transform: scale(1.1);
     transition: all 0.7s;
@@ -227,93 +235,87 @@ footer .columnaredes ul li{
     
 .img1 { 
         grid-area: caballo; 
-        background-image: url(../img/caballo1.png);
+        /* background-image: url(../img/caballo1.png);
         background-size: contain;
-        background-position: center;
+        background-position: center; */
 }
-    
 .img2 { 
     grid-area: perro1; 
-    background-image: url(../img/perro11.png);
+    /* background-image: url(../img/perro11.png);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }  
 .img3 { 
     grid-area: perro2; 
-    background-image: url(../img/Perro12.png);
+    /* background-image: url(../img/Perro12.png);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
-  
 .img4 { 
     grid-area: castillo;
-    background-image: url(../img/castillo1.png);
+    /* background-image: url(../img/castillo1.png);
     background-size: cover;
-    background-position: 0px -30px;
+    background-position: 0px -30px; */
 }
-  
 .img5 { 
     grid-area: casa;
-    background-image: url(../img/casa1.png); 
+    /* background-image: url(../img/casa1.png); 
     background-size:contain;
-    background-position: center;
+    background-position: center; */
 }
-  
 .img6 {
      grid-area: estacion; 
-     background-image: url(../img/estacion1.png);
+     /* background-image: url(../img/estacion1.png);
      background-size:contain;
-     background-position: center;
+     background-position: center; */
 }
-  
 .img7 {
      grid-area: mural;
-     background-image: url(../img/mural.jpg);
+     /* background-image: url(../img/mural.jpg);
      background-size: cover;
-     background-position: center;
+     background-position: center; */
 }
-  
 .img8 {
      grid-area: BsAs;
-     background-image: url(../img/Buenos\ Aires\ PSD\ sRGB.jpg);
+     /* background-image: url(../img/Buenos\ Aires\ PSD\ sRGB.jpg);
      background-size: cover;
-     background-position: center;   
+     background-position: center;    */
 }
 .img9 { 
     grid-area: cancha1; 
-    background-image: url(../img/banfield.jpg);
+    /* background-image: url(../img/banfield.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 .img10 {
      grid-area: cancha2; 
-     background-image: url(../img/BOCA\ en\ A4.jpg);
+     /* background-image: url(../img/BOCA\ en\ A4.jpg);
      background-size: cover;
-     background-position: center;
+     background-position: center; */
 }
 .img11 { 
     grid-area: velero; 
-    background-image: url(../img/velero1.jpg);
+    /* background-image: url(../img/velero1.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 .img12 {
      grid-area: cancha3; 
-     background-image: url(../img/river\ 2021.jpg);
+     /* background-image: url(../img/river\ 2021.jpg);
      background-size: cover;
-     background-position: center;
+     background-position: center; */
 }
 .img13 {
      grid-area: cancha4; 
-     background-image: url(../img/San\ Lorenzo.jpg);
+     /* background-image: url(../img/San\ Lorenzo.jpg);
      background-size: cover;
-     background-position: center;
+     background-position: center; */
 }
 .img14 {
      grid-area: scooter; 
-     background-image: url(../img/scooter.jpg);
+     /* background-image: url(../img/scooter.jpg);
      background-size: cover;
-     background-position: center;
+     background-position: center; */
 }
   
 
@@ -365,7 +367,7 @@ footer .columnaredes ul li{
     .gridGaleria { 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 400px 300px 350px 300px 300px;
+        /* grid-template-rows: 400px 300px 350px 300px 300px; */
         gap: 6px 6px;
         grid-auto-flow: row;
         grid-template-areas: 
@@ -410,9 +412,8 @@ footer .columnaredes ul li{
     /* Galeria */
     .gridGaleria {
         display: grid; 
-        /* grid-auto-columns: 1fr;   */
         grid-template-columns: 1fr 1fr 1fr; 
-        grid-template-rows: 300px 300px 300px 300px 300px; 
+        /* grid-template-rows: 300px 300px 300px 300px 300px;  */
         gap: 6px 6px; 
         grid-template-areas: 
           "perro1 perro2 caballo"
@@ -421,8 +422,8 @@ footer .columnaredes ul li{
           "mural scooter cancha1"
           "cancha2 cancha3 cancha4"; 
       }
-      .img{
-          background-size: cover;
+      .img11 img{
+          display: none;
       }
       /* footer */
     footer .logofooter img{

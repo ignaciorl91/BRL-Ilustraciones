@@ -469,9 +469,7 @@ footer .columnaredes ul li{
     .algunostrabajos .columna33 img{
         width: 100%;
     }
-    .algunostrabajos .columna33 blockquote{
-        /* width: 100%; */
-    }
+
     /* MEDIA GALERIA */
     .gridGaleria{
         display: grid;
@@ -607,8 +605,7 @@ footer .columnaredes ul li{
         width: 100%;
         border-radius: 0;
     }
-    aside{
-    }
+    
     .algunostrabajos{
         background-color: rgb(245, 238, 238);
     }

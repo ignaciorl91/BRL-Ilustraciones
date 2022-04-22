@@ -10,9 +10,12 @@ ul{
 html{
     scroll-behavior: smooth;
 }
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+}
 
 header {
-    background-image:linear-gradient(  rgba(245, 238, 238,0),rgba(245, 238, 238, .9)  ), url(../img/colores.jpg);
+    background-image:linear-gradient(rgba(245, 238, 238,0) 50%,rgba(255, 255, 255, 1)  ), url(../img/opcionfondo2.jpeg);
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -37,23 +40,28 @@ header .menu{
 
 header nav a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(56, 54, 54);
     font-size: 18px;
     padding: 1px 15px 1px;
-    border-radius: 15px;
-    background-color: rgba(6, 58, 22);
     margin-left: 6px;
-    /* margin-right: 5px; */
     font-weight: 500;
     z-index: 2;
 }
 header a:hover{
-    background-color: rgb(53, 121, 106);
-    color: rgb(14, 15, 15);
+    border-top: 1px solid rgb(56, 54, 54);
+    border-bottom: 1px solid rgb(56, 54, 54);
     transition: all 0.4s;
+    font-weight: 600;
+}
+header nav .paginaActual{
+    border-top: 1px solid rgb(56, 54, 54);
+    border-bottom: 1px solid rgb(56, 54, 54);
+    /* font-weight: 600; */
 }
 body{
-    background-color: rgb(245, 238, 238);
+    /* background-color: rgb(245, 238, 238); */
+    /* background-image: url(../img/opcionfondo2.jpeg); */
+    background-size: cover;
     margin: 0;
     font-family: "catamaran";
 }
@@ -74,6 +82,7 @@ body::-webkit-scrollbar-thumb{
     top: 10px;
     right:10px;
     background-image: url(../img/favicon.png);
+    filter: saturate(50%);
     background-size:cover;
     border-radius: 30%;
     width: 50px;
@@ -170,15 +179,14 @@ main{
 .imagenindex{
     margin-top: 10px;
     margin-right: 25px;
-    border-radius: 15px;
-    
+    border-radius: 5px;
 }
 
 
 /*FOOTER*/
 footer{
-    background-color: darkslategrey;
-    color: white;
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(245, 238, 238,0) 50%), url(../img/opcionfondo2.jpeg);
+    color: rgb(85, 83, 83);
     width: 100%;
     justify-items: center;
 }
@@ -192,10 +200,10 @@ footer .logofooter img{
 footer .columnaredes a{
     text-decoration: none;
     font-size: 50px;
-    color:rgb(255, 255, 255);   
+    color:rgb(85, 83, 83);   
 }
 footer a{
-    color:rgb(255, 255, 255);   
+    color:rgb(85, 83, 83);   
     transition: 0.5s;
 }
 footer a:hover{
@@ -322,18 +330,61 @@ footer .columnaredes ul li{
 
 
 
-/*PAGINA SERVICIOS*/
+/* PAGINA SERVICIOS*/
 .serv{
-    position: relative;
-    height: 150px;
-    margin: 8px 15px;
+    height: 100%;
     filter: grayscale(70%);
-    border: 3px transparent;
  }
-.serv:hover{
-    filter: grayscale(00%);
-    border: black solid 3px;
+ .serv:hover{
+     filter: grayscale(00%);
+     transition: 1s;
+ }
+ .serv:hover h4{
+     color: rgb(34, 33, 33);
+     transition: .8s;
+ }
+ .serv h4{
+    text-align: center;
+    color: white;
+    font-size: 60px;
 }
+.talleres{
+    grid-area: talleres;
+    background-image: url(../img/taller.jpeg);
+    background-position:12px 55%;
+    background-size: cover;
+}
+.pedidos{
+    grid-area: pedidos;
+    background-image: url(../img/DISCUS\ PECES\ con\ texto.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.acrilicos{
+    grid-area: acrilicos;
+    background-image: url(../img/acrilico.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.murales{
+    grid-area: murales;
+    background-image: url(../img/paleta.jpeg);
+    background-size: cover;
+    background-position: 100% 30%;
+}
+.mates{
+    grid-area: mates;
+    background-image: url(../img/mates.jpg);
+    background-size: cover;
+    background-position: 100% 70%;
+}
+.estampitas{
+    grid-area: estampitas;
+    background-image: url(../img/estampitas.jpeg);
+    background-size: cover;
+    background-position: 100% 40%;
+}
+
 .serv h3{
     align-items:center;
 
@@ -359,6 +410,7 @@ footer .columnaredes ul li{
     /* INDEX */
     .imagenindex{
         height: 500px;
+        margin-left: 30px;
     }
     aside{
         width: 50%;
@@ -385,6 +437,16 @@ footer .columnaredes ul li{
         display: none;
     }
     /* SERVIVIOS */
+    .gridServicios{
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 250px 250px;
+        grid-template-areas:
+        "talleres pedidos acrilicos"
+        "murales mates estampitas"
+        ;
+    }
     .serviciosSection img{
         height: 100vh;
         max-width: 70%;
@@ -392,6 +454,15 @@ footer .columnaredes ul li{
     .serviciosSection p, h2{
         margin: 30px 25px;
     }
+
+    .serviciosSection img{
+        height: 100vh;
+        max-width: 70%;
+    }
+    .serviciosSection p, h2{
+        margin: 30px 25px;
+    }
+    
     
 }
 @media only screen and (min-width:767px) and (max-width:1023px){
@@ -447,6 +518,19 @@ footer .columnaredes ul li{
         display: none;
     }
     /* SERVICIOS */
+    .gridServicios{
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 250px 250px;
+        grid-template-areas:
+        "talleres pedidos acrilicos"
+        "murales mates estampitas"
+        ;
+    }
+    .serv h4{
+        font-size: 50px;
+    }
     .serviciosSection img{
         height: 100vh;
         max-width: 70%;
@@ -489,6 +573,20 @@ footer .columnaredes ul li{
         background-size: cover;
     }
     /* MEDIA SERVICIOS */
+    .gridServicios{
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: calc((100vh - 139px)/3) calc((100vh - 139px)/3) calc((100vh - 139px)/3);
+        grid-template-areas:
+        "talleres pedidos"
+        "acrilicos murales"
+        "mates estampitas"
+        ;
+    }
+    .serv h4{
+        font-size: 50px;
+    }
     #talleres{
         height: 100vh;
         background-image: url(../img/taller.jpeg);
@@ -509,6 +607,14 @@ footer .columnaredes ul li{
         background-size: cover;
         filter:contrast(100%);
     }
+    #murales{
+        height: 100vh;
+        background-image: url(../img/mural.jpg);
+        background-position: center;
+        background-size: cover;
+        filter:contrast(100%);
+    }
+
     #mates{
         height: 100vh;
         background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0) 70% ),url(../img/mates.jpg);
@@ -606,9 +712,22 @@ footer .columnaredes ul li{
         width: 100%;
         border-radius: 0;
     }
+    aside h2{
+        text-align: center;
+    }
+    aside{
+        text-align: justify;
+        color: white;
+        padding: 20px;
+    }
     
     .algunostrabajos{
+        padding-top: 5px;
+        color:rgb(85, 83, 83);
         background-color: rgb(245, 238, 238);
+    }
+    main .algunostrabajos h2{
+        text-align:center;
     }
     .algunostrabajos .row{
         display: block;

@@ -1,44 +1,88 @@
-*{
-    box-sizing:border-box;
+/* generales */
+* {
+    box-sizing: border-box;
+    font-family: "catamaran";
 }
-a{
+
+a {
     text-decoration: none;
 }
-ul{
+
+ul {
     list-style: none;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-h1, h2, h3, h4, h5, h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-transform: uppercase;
 }
 
+/*Personalizacion de scrollbar*/
+body::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(53, 121, 106, .2);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(6, 58, 22, .5);
+    border-radius: 100px;
+}
+
+/*dentro de esta clase estan las columnas de distintos porcentajes (25%, 33% y 50%)*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* define columnas de determinado % de pantalla, se ubican en div row */
+/* columna25 y 50 eliminadas por obsoletas */
+/*columna33 vigente en index  y footer */
+.columna33 {
+    width: 33.3%;
+    text-align: center;
+    ;
+}
+
+/*  INICIO HEADER */
 header {
-    background-image:linear-gradient(rgba(245, 238, 238,0) 50%,rgba(255, 255, 255, 1)  ), url(../img/opcionfondo2.jpeg);
+    background-image: linear-gradient(rgba(245, 238, 238, 0) 50%, rgba(255, 255, 255, 1)), url(../img/opcionfondo2.jpeg);
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 100%;
     padding: 0px;
     margin: 0px;
     z-index: 1;
     position: relative;
 }
-header img{
+
+header img {
     margin-left: 15px;
     width: 200px;
 }
-header .menu{
+
+header .menu {
     margin-right: 0px;
     z-index: 2;
 }
-.menu ul{
+
+.menu ul {
     display: flex;
     margin-right: 10px;
 }
 
-header nav a{
+header nav a {
     text-decoration: none;
     color: rgb(56, 54, 54);
     font-size: 18px;
@@ -47,782 +91,861 @@ header nav a{
     font-weight: 500;
     z-index: 2;
 }
-header a:hover{
+
+header a:hover {
     border-top: 1px solid rgb(56, 54, 54);
     border-bottom: 1px solid rgb(56, 54, 54);
     transition: all 0.4s;
     font-weight: 600;
+    /* esto esta para corregir boostrap */
+    color: rgb(56, 54, 54);
+    text-decoration: none;
+    /* fin correccion boostrap  */
 }
-header nav .paginaActual{
+
+header nav .paginaActual {
     border-top: 1px solid rgb(56, 54, 54);
     border-bottom: 1px solid rgb(56, 54, 54);
     /* font-weight: 600; */
 }
-body{
-    /* background-color: rgb(245, 238, 238); */
-    /* background-image: url(../img/opcionfondo2.jpeg); */
-    background-size: cover;
-    margin: 0;
-    font-family: "catamaran";
-}
-/*Personalizacion de scrollbar*/
-body::-webkit-scrollbar{
-    width: 10px;
-    border-radius: 50px;
-    background: rgba(53, 121, 106, .2);
-    }
-body::-webkit-scrollbar-thumb{
-    background:  rgba(6, 58, 22, .5);
-    border-radius: 100px;
-}
 
+/* FIN HEADER */
 /*boton para volver arriba*/
-#goUp{
+#goUp {
     position: fixed;
     top: 10px;
-    right:10px;
+    right: 10px;
     background-image: url(../img/favicon.png);
     filter: saturate(50%);
-    background-size:cover;
+    background-size: cover;
     border-radius: 30%;
     width: 50px;
-    height:54px;
+    height: 54px;
     z-index: 1;
 }
-#goUp h2{
-    text-align: center  ;
+
+#goUp h2 {
+    text-align: center;
+    font-size: 25px;
     margin: 0;
-    padding-top: 10px;
-    
-}
-#goUp a{
-    text-decoration: none;
-    color:rgb(255, 255, 255)
+    padding-top: 15px;
 }
 
-main{
+#goUp a {
+    text-decoration: none;
+    color: rgb(255, 255, 255)
+}
+
+main {
     margin: 10px 10px;
 }
 
-
-
-/*Pagina Contacto */
-.fieldsetContacto{
-    width: 70%;
-    margin: 15px 15% 15px 15%;
-    
-}
-.formContacto{
-    padding: 5px 10px;
-}
-.contactoLinea{
-    display: flex;
-    margin-bottom: 10px;
-}
-.contactoLinea2{
-    /* display: flex; */
-    margin-bottom: 10px;
-}
-.formContacto  label{
-    padding: 5px 10px;
-}
-.formContacto .contactoLinea label{
-    display: block;
-    width: 15%;
-    padding: 5px 10px;
-}
-
-.formContacto .contactoLinea input{
-    display: block;
-    width: 40%;    
-    padding: 5px 50px;
-    margin: 5px;
-}
-.formContacto textarea{
-    width: calc(100% - 20px);
-    margin: 5px 10px;
-    height: 100px;
-}
-.mapa{
-    width: 70%;
-    margin-left: 15%;
-}
-
-
-
-/*dentro de esta clase estan las columnas de distintos porcentajes (25%, 33% y 50%)*/
-.row{
-    display: flex;
-    flex-wrap: wrap;   
-    box-sizing: border-box;
-    width: 100%;
-}   
-/* define columnas de determinado % de pantalla, se ubican en div row */
-.columna25{
-    width: 24.2%;
-    padding: 5px 5px;
-}   
-.columna33{
-    width: 33.3%;
-    text-align: center;;
-}
-.columna50{
-    width: 50%;
-}
-.columna50 img{
-    width: 100%;
-}
-/*Pagina index*/
-.algunostrabajos .columna33 img{
-    height: 300px;
-}
-.imagenindex{
-    margin-top: 10px;
-    margin-right: 25px;
-    border-radius: 5px;
-}
-
-
-/*FOOTER*/
-footer{
-    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(245, 238, 238,0) 50%), url(../img/opcionfondo2.jpeg);
+/*INICIO FOOTER*/
+footer {
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(245, 238, 238, 0) 50%), url(../img/opcionfondo2.jpeg);
     color: rgb(85, 83, 83);
     width: 100%;
     justify-items: center;
 }
-footer .row{
+
+footer .row {
     align-items: center;
     padding: 10px;
 }
-footer .logofooter img{
+
+footer .logofooter img {
     width: 30vh;
 }
-footer .columnaredes a{
+
+footer .columnaredes a {
     text-decoration: none;
     font-size: 50px;
-    color:rgb(85, 83, 83);   
+    color: rgb(85, 83, 83);
 }
-footer a{
-    color:rgb(85, 83, 83);   
+
+footer a {
+    color: rgb(85, 83, 83);
     transition: 0.5s;
 }
-footer a:hover{
-    color:  black;
+
+footer a:hover {
+    color: black;
     transition: 0.5s;
 }
-footer ul li{
+
+footer ul li {
     padding: 10px 0 10px 0;
 }
-footer .columnaredes ul{
-    display: flex;  
+
+footer .columnaredes ul {
+    display: flex;
     flex-wrap: wrap;
 }
-footer .columnaredes ul li{
+
+footer .columnaredes ul li {
     padding: 15px;
 }
 
-/*Pagina Galeria*/
-.img{
-    border:1px solid black;
-    margin: 5px;
-    transition: all 0.7s;
-    border-radius: 10px;
+/* FIN FOOTER */
 
 
+/*INICIO PAGINA INDEX*/
+.carousel-item {
+    max-height: 60vh;
 }
-.img img{
+
+.carousel-item img {
     width: 100%;
-    border-radius: 10px;
-    height: 100%;
+    height: 60vh;
 }
 
-.img:hover{
-    transform: scale(1.1);
-    transition: all 0.7s;
+.carousel-indicators li {
+    background-color: rgb(56, 54, 54);
 }
-    
-.img1 { 
-        grid-area: caballo; 
-        /* background-image: url(../img/caballo1.png);
-        background-size: contain;
-        background-position: center; */
+
+.fa-angle-left,
+.fa-angle-right {
+    color: rgb(56, 54, 54);
+    font-size: 2rem;
 }
-.img2 { 
-    grid-area: perro1; 
-    /* background-image: url(../img/perro11.png);
-    background-size: cover;
-    background-position: center; */
-}  
-.img3 { 
-    grid-area: perro2; 
-    /* background-image: url(../img/Perro12.png);
-    background-size: cover;
-    background-position: center; */
+
+.sobremi{
+    margin-top: 5px;
 }
-.img4 { 
-    grid-area: castillo;
-    /* background-image: url(../img/castillo1.png);
-    background-size: cover;
-    background-position: 0px -30px; */
+
+.imgAlgunosTrabajos{
+    height: 50vh;
+    width: 100%;
 }
-.img5 { 
-    grid-area: casa;
-    /* background-image: url(../img/casa1.png); 
-    background-size:contain;
-    background-position: center; */
+.algunostrabajos{
+    margin: 0;
+    padding: 0;
 }
-.img6 {
-     grid-area: estacion; 
-     /* background-image: url(../img/estacion1.png);
-     background-size:contain;
-     background-position: center; */
+.cfAT{
+    padding: 0;
 }
-.img7 {
-     grid-area: mural;
-     /* background-image: url(../img/mural.jpg);
-     background-size: cover;
-     background-position: center; */
+blockquote{
+    /* max-width: 100%; */
 }
-.img8 {
-     grid-area: BsAs;
-     /* background-image: url(../img/Buenos\ Aires\ PSD\ sRGB.jpg);
-     background-size: cover;
-     background-position: center;    */
-}
-.img9 { 
-    grid-area: cancha1; 
-    /* background-image: url(../img/banfield.jpg);
-    background-size: cover;
-    background-position: center; */
-}
-.img10 {
-     grid-area: cancha2; 
-     /* background-image: url(../img/BOCA\ en\ A4.jpg);
-     background-size: cover;
-     background-position: center; */
-}
-.img11 { 
-    grid-area: velero; 
-    /* background-image: url(../img/velero1.jpg);
-    background-size: cover;
-    background-position: center; */
-}
-.img12 {
-     grid-area: cancha3; 
-     /* background-image: url(../img/river\ 2021.jpg);
-     background-size: cover;
-     background-position: center; */
-}
-.img13 {
-     grid-area: cancha4; 
-     /* background-image: url(../img/San\ Lorenzo.jpg);
-     background-size: cover;
-     background-position: center; */
-}
-.img14 {
-     grid-area: scooter; 
-     /* background-image: url(../img/scooter.jpg);
-     background-size: cover;
-     background-position: center; */
-}
-  
 
 
+/* .imagenindex {
+    margin-top: 10px;
+    margin-right: 25px;
+    border-radius: 5px;
+} */
 
-
+/* FIN INDEX */
 /* PAGINA SERVICIOS*/
-.serv{
+.serv {
+    display: flex;
     height: 100%;
     filter: grayscale(70%);
- }
- .serv:hover{
-     filter: grayscale(00%);
-     transition: 1s;
- }
- .serv:hover h4{
-     color: rgb(34, 33, 33);
-     transition: .8s;
- }
- .serv h4{
-    text-align: center;
-    color: white;
-    font-size: 60px;
+    justify-content: center;
 }
-.talleres{
+
+.serv:hover {
+    filter: grayscale(00%);
+    transition: 1s;
+}
+
+.serv:hover h4 {
+    color: rgb(34, 33, 33);
+    text-shadow: none;
+    transition: .8s;
+}
+
+.serv h4 {
+    color: white;
+    font-size: 4rem;
+    max-width: 100%;
+    text-shadow: 1px 1px 2px black;
+}
+
+.talleres {
     grid-area: talleres;
     background-image: url(../img/taller.jpeg);
-    background-position:12px 55%;
+    background-position: 12px 55%;
     background-size: cover;
 }
-.pedidos{
+
+.pedidos {
     grid-area: pedidos;
     background-image: url(../img/DISCUS\ PECES\ con\ texto.jpg);
     background-size: cover;
     background-position: center;
 }
-.acrilicos{
+
+.acrilicos {
     grid-area: acrilicos;
     background-image: url(../img/acrilico.jpeg);
     background-size: cover;
     background-position: center;
 }
-.murales{
+
+.murales {
     grid-area: murales;
     background-image: url(../img/paleta.jpeg);
     background-size: cover;
     background-position: 100% 30%;
 }
-.mates{
+
+.mates {
     grid-area: mates;
     background-image: url(../img/mates.jpg);
     background-size: cover;
     background-position: 100% 70%;
 }
-.estampitas{
+
+.estampitas {
     grid-area: estampitas;
     background-image: url(../img/estampitas.jpeg);
     background-size: cover;
     background-position: 100% 40%;
 }
 
-.serv h3{
-    align-items:center;
-
-    text-align: center;
+.serviciosSection {
+    display: flex;
+    margin-top: 15px;
 }
-.serv img{
-    position: absolute;
-    top: 0px;
-    z-index: -1;
+
+/* FIN PAGINA SERVICIOS */
+
+/*INICIO PAGINA GALERIA*/
+.img {
+    border: 1px solid black;
+    margin: 5px;
+    transition: all 0.7s;
+    border-radius: 10px;
+}
+
+.img img {
+    width: 100%;
+    border-radius: 10px;
     height: 100%;
 }
-.serviciosSection{
-    display: flex;
-    margin-top: 15px;   
+
+.img:hover {
+    transform: scale(1.1);
+    transition: all 0.7s;
 }
+
+.img1 {
+    grid-area: caballo;
+}
+
+.img2 {
+    grid-area: perro1;
+}
+
+.img3 {
+    grid-area: perro2;
+}
+
+.img4 {
+    grid-area: castillo;
+}
+
+.img5 {
+    grid-area: casa;
+}
+
+.img6 {
+    grid-area: estacion;
+}
+
+.img7 {
+    grid-area: mural;
+}
+
+.img8 {
+    grid-area: BsAs;
+}
+
+.img9 {
+    grid-area: cancha1;
+}
+
+.img10 {
+    grid-area: cancha2;
+}
+
+.img11 {
+    grid-area: velero;
+}
+
+.img12 {
+    grid-area: cancha3;
+}
+
+.img13 {
+    grid-area: cancha4;
+}
+
+.img14 {
+    grid-area: scooter;
+}
+
+/* FIN PAGINA GALERIA */
+
+/*INICIO PAGINA CONTACTO */
+.fieldsetContacto {
+    width: 70%;
+    margin: 15px 15% 15px 15%;
+    border: solid rgb(77, 73, 73) 1px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.326);
+}
+
+.fieldsetContacto legend {
+    width: auto;
+}
+
+.formContacto {
+    padding: 5px 10px;
+}
+
+fieldset form input {
+    padding: 1px !important;
+}
+
+.contactoLinea {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.contactoLinea2 {
+    /* display: flex; */
+    margin-bottom: 10px;
+}
+
+.formContacto label {
+    padding: 5px 10px;
+}
+
+.formContacto .contactoLinea label {
+    display: block;
+    width: 10rem;
+}
+
+.formContacto .contactoLinea input {
+    display: block;
+    width: 40%;
+    padding: 5px 50px;
+    margin: 5px;
+}
+
+.formContacto textarea {
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+    height: 20vh;
+}
+
+.mapa {
+    width: 70%;
+    margin-left: 15%;
+}
+
+/* FIN PAGINA CONTACTO */
+
+
 
 
 
 
 
 /* mediaquerys */
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:1024px) {
+
     /* INDEX */
-    .imagenindex{
+    /* .imagenindex {
         height: 500px;
         margin-left: 30px;
-    }
-    aside{
+    } */
+
+    aside {
         width: 50%;
     }
+
     /* seccion Galeria */
-    .gridGaleria { 
+    .gridGaleria {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         /* grid-template-rows: 400px 300px 350px 300px 300px; */
         gap: 6px 6px;
         grid-auto-flow: row;
-        grid-template-areas: 
-        "perro1 perro2 caballo caballo"
-          "castillo castillo casa estacion"
-          "mural BsAs BsAs BsAs"
-          "mural cancha1 cancha2 velero"
-          "scooter cancha3 cancha4 velero";     
-        }
+        grid-template-areas:
+            "perro1 perro2 caballo caballo"
+            "castillo castillo casa estacion"
+            "mural BsAs BsAs BsAs"
+            "mural cancha1 cancha2 velero"
+            "scooter cancha3 cancha4 velero";
+    }
+
     /* header */
-    .hamb{
+    .hamb {
         display: none;
     }
-    .Xmenu{
+
+    .Xmenu {
         display: none;
     }
+
     /* SERVIVIOS */
-    .gridServicios{
+    .gridServicios {
         display: grid;
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 250px 250px;
         grid-template-areas:
-        "talleres pedidos acrilicos"
-        "murales mates estampitas"
+            "talleres pedidos acrilicos"
+            "murales mates estampitas"
         ;
     }
-    .serviciosSection img{
+
+    .serviciosSection img {
         height: 100vh;
         max-width: 70%;
     }
-    .serviciosSection p, h2{
+
+    .serviciosSection p,
+    h2 {
         margin: 30px 25px;
     }
 
-    .serviciosSection img{
+    .serviciosSection img {
         height: 100vh;
         max-width: 70%;
     }
-    .serviciosSection p, h2{
+
+    .serviciosSection p,
+    h2 {
         margin: 30px 25px;
     }
-    
-    
+
+
 }
-@media only screen and (min-width:767px) and (max-width:1023px){
-     /* INDEX */
-     .imagenindex{
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+
+    /* INDEX */
+    /* .imagenindex {
         width: 45%;
-    }
-    aside{
+    } */
+
+    /* aside {
         width: 45%;
-    }
-    .columna33{
+    } */
+
+    .columna33 {
         width: calc(33%);
-        overflow:hidden;
+        overflow: hidden;
     }
-    .algunostrabajos .columna33 img{
+
+    .algunostrabajos .columna33 img {
         width: 100%;
     }
+
     /* Galeria */
     .gridGaleria {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr; 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         /* grid-template-rows: 300px 300px 300px 300px 300px;  */
-        gap: 6px 6px; 
-        grid-template-areas: 
-          "perro1 perro2 caballo"
-          "castillo casa estacion"
-          "mural BsAs BsAs"
-          "mural scooter cancha1"
-          "cancha2 cancha3 cancha4"; 
-      }
-      .img11 img{
-          display: none;
-      }
-      /* footer */
-    footer .logofooter img{
+        gap: 6px 6px;
+        grid-template-areas:
+            "perro1 perro2 caballo"
+            "castillo casa estacion"
+            "mural BsAs BsAs"
+            "mural scooter cancha1"
+            "cancha2 cancha3 cancha4";
+    }
+
+    .img11 img {
+        display: none;
+    }
+
+    /* footer */
+    footer .logofooter img {
         width: 20vh;
-      }
-    footer .columnaredes a{
+    }
+
+    footer .columnaredes a {
         font-size: 35px;
     }
+
     footer .columnaredes {
         padding: auto;
     }
-    footer .columna33 li{
+
+    footer .columna33 li {
         font-size: 15px;
     }
 
     /* header */
-    .hamb{
+    .hamb {
         display: none;
     }
-    .Xmenu{
+
+    .Xmenu {
         display: none;
     }
+
     /* SERVICIOS */
-    .gridServicios{
+    .gridServicios {
         display: grid;
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 250px 250px;
         grid-template-areas:
-        "talleres pedidos acrilicos"
-        "murales mates estampitas"
+            "talleres pedidos acrilicos"
+            "murales mates estampitas"
         ;
     }
-    .serv h4{
-        font-size: 50px;
+
+    .serv h4 {
+        /* font-size: 30px; */
     }
-    .serviciosSection img{
+
+    .serviciosSection img {
         height: 100vh;
         max-width: 70%;
     }
-    .serviciosSection p, h2{
+
+    .serviciosSection p,
+    h2 {
         margin: 30px 25px;
     }
 }
-@media only screen and (min-width:480px) and (max-width:766px){
-     /* INDEX */
-     .imagenindex{
+
+@media only screen and (min-width:576px) and (max-width:767px) {
+
+    /* INDEX */
+    /* .imagenindex {
         width: 45%;
     }
-    aside{
+
+    aside {
         width: 45%;
-    }
-    .columna33{
+    } */
+
+    .columna33 {
         width: calc(33%);
-        overflow:hidden;
+        overflow: hidden;
     }
-    .algunostrabajos .columna33 img{
+
+    .algunostrabajos .columna33 img {
         width: 100%;
     }
 
     /* MEDIA GALERIA */
-    .gridGaleria{
+    .gridGaleria {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(7, 50vh);
         grid-template-areas:
-         "perro1 perro2"
-         "caballo castillo"
-         "casa estacion"
-         "BsAs BsAs"
-         "mural scooter"
-         "mural cancha1"
-         "cancha2 cancha3";
+            "perro1 perro2"
+            "caballo castillo"
+            "casa estacion"
+            "BsAs BsAs"
+            "mural scooter"
+            "mural cancha1"
+            "cancha2 cancha3";
     }
-    .img{
+
+    .img {
         background-size: cover;
     }
+
     /* MEDIA SERVICIOS */
-    .gridServicios{
+    .gridServicios {
         display: grid;
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: calc((100vh - 139px)/3) calc((100vh - 139px)/3) calc((100vh - 139px)/3);
         grid-template-areas:
-        "talleres pedidos"
-        "acrilicos murales"
-        "mates estampitas"
+            "talleres pedidos"
+            "acrilicos murales"
+            "mates estampitas"
         ;
     }
-    .serv h4{
+
+    .serv h4 {
         font-size: 50px;
     }
-    #talleres{
+
+    #talleres {
         height: 100vh;
         background-image: url(../img/taller.jpeg);
         background-position: center;
         background-size: cover;
-        
+
     }
-    #pedidos{
+
+    #pedidos {
         height: 100vh;
         background-image: url(../img/perros4.jpg);
         background-position: center;
         background-size: cover;
     }
-    #acrilicos{
+
+    #acrilicos {
         height: 100vh;
         background-image: url(../img/acrilico.jpeg);
         background-position: center;
         background-size: cover;
-        filter:contrast(100%);
+        filter: contrast(100%);
     }
-    #murales{
+
+    #murales {
         height: 100vh;
         background-image: url(../img/mural.jpg);
         background-position: center;
         background-size: cover;
-        filter:contrast(100%);
+        filter: contrast(100%);
     }
 
-    #mates{
+    #mates {
         height: 100vh;
-        background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0) 70% ),url(../img/mates.jpg);
+        background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
         background-position: center;
         background-size: cover;
     }
-    #estampitas{
-        height: 100vh;
-        /* background-image: url(../img/estampitas.jpeg); */
 
+    #estampitas {
+        height: 100vh;
         background-size: cover;
-        background-image: linear-gradient( rgba(255, 255, 255, .5),rgba(255, 255, 255, 0) 80% ), url(../img/estampitas.jpeg);
+        background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
     }
-    .serviciosSection img{
+
+    .serviciosSection img {
         display: none;
     }
-    .serviciosSection p,h2{
-        background-color: rgba(255,255,255,.2);  
+
+    .serviciosSection p,
+    h2 {
+        background-color: rgba(255, 255, 255, .2);
     }
 
-      /* footer pantallas chicas */
-      footer .row{
+    /* footer pantallas chicas */
+    footer .row {
         display: block;
     }
-    footer .columna33{
+
+    footer .columna33 {
         width: 100%;
         justify-content: center;
     }
-    footer .columna33 ul{
+
+    footer .columna33 ul {
         justify-content: center;
         padding: 0;
     }
 
     /* header */
-    .hamb{
+    .hamb {
         margin-right: 16px;
     }
-   
-    .menu{
+
+    .menu {
         position: fixed;
         width: 220px;
         height: 100%;
         background-color: white;
         padding-top: 20px;
-        top:0;
+        top: 0;
         right: 0;
         transition: all 1.8s ease;
         transform: translateX(100%);
     }
-   
+
     header .menu .Xmenu {
         padding-left: 70%;
     }
+
     header .menu .Xmenu a {
         color: black;
         background-color: transparent;
     }
-    .menu ul{
+
+    .menu ul {
         flex-direction: column;
     }
-    .menu ul li{
+
+    .menu ul li {
         padding-bottom: 20px;
     }
-    .menu ul li a{
+
+    .menu ul li a {
         background-color: transparent;
         color: black;
-        /* border-top: solid 1px black;     */
-        border-bottom: solid 1px black;    
+        border-bottom: solid 1px black;
     }
 
     /* CONTACTO */
-    .fieldsetContacto{
+    .fieldsetContacto {
         width: 90%;
         margin: auto;
         padding: 3px;
     }
-    .formContacto{
+
+    .formContacto {
         padding: 0;
     }
-    .contactoLinea input{
+
+    .contactoLinea input {
         flex-shrink: 3;
     }
-    .contactoLinea label{
-        flex-shrink:2;
+
+    .contactoLinea label {
+        flex-shrink: 2;
     }
 
 
 }
-@media only screen and (max-width:478px){
-     /* INDEX */
-     .imagenindex{
+
+@media only screen and (max-width:576px) {
+
+    /* INDEX */
+    .imagenindex {
         position: absolute;
         z-index: -1;
-        filter:  contrast(60%);
+        filter: contrast(60%);
         width: 100%;
         border-radius: 0;
+        padding: 0;
+        margin:0;
     }
-    aside h2{
+
+    aside h2 {
         text-align: center;
     }
-    aside{
+
+    aside {
         text-align: justify;
         color: white;
         padding: 20px;
     }
-    
-    .algunostrabajos{
+
+    .algunostrabajos {
         padding-top: 5px;
-        color:rgb(85, 83, 83);
+        color: rgb(85, 83, 83);
         background-color: rgb(245, 238, 238);
     }
-    main .algunostrabajos h2{
-        text-align:center;
+
+    main .algunostrabajos h2 {
+        text-align: center;
     }
-    .algunostrabajos .row{
+
+    .algunostrabajos .row {
         display: block;
     }
-    .algunostrabajos .row .columna33{
+
+    .algunostrabajos .row .columna33 {
         width: 100%;
     }
-    .algunostrabajos .row .columna33 img{
+
+    .algunostrabajos .row .columna33 img {
         width: 100%;
     }
 
 
-    
-    main{
+
+    main {
         width: 100%;
         padding: 0;
         margin: 0;
     }
-    .gridGaleria{
+
+    .gridGaleria {
         /* grid-template-columns: 1fr; */
         /* row-gap: 10px; */
         margin: 0;
     }
-    .img{
+
+    .img {
         min-height: 40vh;
-     }
-      /* footer pantallas chicas */
-    footer .row{
+    }
+
+    /* footer pantallas chicas */
+    footer .row {
         display: block;
     }
-    footer .columna33{
+
+    footer .columna33 {
         width: 100%;
         justify-content: center;
     }
-    footer .columna33 ul{
+
+    footer .columna33 ul {
         justify-content: center;
         padding: 0;
     }
 
-      /* header */
-      .menu{
+    /* header */
+    .menu {
         display: none;
     }
 
     /* contacto */
-    .fieldsetContacto{
+    .fieldsetContacto {
         width: 95%;
         margin: auto;
     }
-    .formContacto{  
+
+    .formContacto {
         width: 100%;
-    }
-    .formContacto .contactoLinea input{
-        width: 100%;
-    }
-    .contactoLinea{
-        display:contents;
     }
 
-     /* MEDIA SERVICIOS */
-    #talleres{
+    .formContacto .contactoLinea input {
+        width: 100%;
+    }
+
+    .contactoLinea {
+        display: contents;
+    }
+
+    /* MEDIA SERVICIOS */
+    #talleres {
         height: 100vh;
         background-image: url(../img/taller.jpeg);
         background-position: center;
         background-size: cover;
-            
+
     }
-    #pedidos{
+
+    #pedidos {
         height: 100vh;
         background-image: url(../img/perros4.jpg);
         background-position: center;
         background-size: cover;
     }
-    #acrilicos{
+
+    #acrilicos {
         height: 100vh;
         background-image: url(../img/acrilico.jpeg);
         background-position: center;
         background-size: cover;
-        filter:contrast(100%);
+        filter: contrast(100%);
     }
-    #mates{
+
+    #mates {
         height: 100vh;
-        background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0) 70% ),url(../img/mates.jpg);
+        background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
         background-position: center;
         background-size: cover;
-        }
-    #estampitas{
+    }
+
+    #estampitas {
         height: 100vh;
         background-size: cover;
-        background-image: linear-gradient( rgba(255, 255, 255, .5),rgba(255, 255, 255, 0) 80% ), url(../img/estampitas.jpeg);
-        }
-    .serviciosSection img{
+        background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
+    }
+
+    .serviciosSection img {
         display: none;
     }
-    .serviciosSection p, .serviciosSection h2{
-        background-color: rgba(255,255,255,.2);  
+
+    .serviciosSection p,
+    .serviciosSection h2 {
+        background-color: rgba(255, 255, 255, .2);
     }
 }

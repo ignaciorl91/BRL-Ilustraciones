@@ -456,16 +456,6 @@ fieldset form input {
 /* mediaquerys */
 @media only screen and (min-width:1024px) {
 
-    /* INDEX */
-    /* .imagenindex {
-        height: 500px;
-        margin-left: 30px;
-    } */
-
-    aside {
-        width: 50%;
-    }
-
     /* seccion Galeria */
     .gridGaleria {
         display: grid;
@@ -527,14 +517,6 @@ fieldset form input {
 
 @media only screen and (min-width:768px) and (max-width:1023px) {
 
-    /* INDEX */
-    /* .imagenindex {
-        width: 45%;
-    } */
-
-    /* aside {
-        width: 45%;
-    } */
 
     .columna33 {
         width: calc(33%);
@@ -549,7 +531,6 @@ fieldset form input {
     .gridGaleria {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        /* grid-template-rows: 300px 300px 300px 300px 300px;  */
         gap: 6px 6px;
         grid-template-areas:
             "perro1 perro2 caballo"
@@ -601,10 +582,6 @@ fieldset form input {
         ;
     }
 
-    .serv h4 {
-        /* font-size: 30px; */
-    }
-
     .serviciosSection img {
         height: 100vh;
         max-width: 70%;
@@ -618,14 +595,6 @@ fieldset form input {
 
 @media only screen and (min-width:576px) and (max-width:767px) {
 
-    /* INDEX */
-    /* .imagenindex {
-        width: 45%;
-    }
-
-    aside {
-        width: 45%;
-    } */
 
     .columna33 {
         width: calc(33%);

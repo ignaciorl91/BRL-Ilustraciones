@@ -1,7 +1,9 @@
 /* generales */
+$fuente1: catamaran;
+
 * {
     box-sizing: border-box;
-    font-family: "catamaran";
+    font-family: $fuente1;
 }
 
 a {
@@ -29,11 +31,11 @@ h6 {
 body::-webkit-scrollbar {
     width: 10px;
     border-radius: 50px;
-    background: rgba(53, 121, 106, 0.2);
+    background: rgba(53, 121, 106, .2);
 }
 
 body::-webkit-scrollbar-thumb {
-    background: rgba(6, 58, 22, 0.5);
+    background: rgba(6, 58, 22, .5);
     border-radius: 100px;
 }
 
@@ -55,7 +57,7 @@ body::-webkit-scrollbar-thumb {
 
 /*  INICIO HEADER */
 header {
-    background-image: linear-gradient(rgba(245, 238, 238, 0) 50%, rgb(255, 255, 255)), url(../img/opcionfondo2.jpeg);
+    background-image: linear-gradient(rgba(245, 238, 238, 0) 50%, rgba(255, 255, 255, 1)), url(../img/opcionfondo2.jpeg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,22 +66,25 @@ header {
     margin: 0px;
     z-index: 1;
     position: relative;
+
+    img {
+        margin-left: 15px;
+        width: 200px;
+    }
+
+    .menu {
+        margin-right: 0px;
+        z-index: 2;
+
+        ul {
+            display: flex;
+            margin-right: 10px;
+        }
+    }
 }
 
-header img {
-    margin-left: 15px;
-    width: 200px;
-}
 
-header .menu {
-    margin-right: 0px;
-    z-index: 2;
-}
 
-.menu ul {
-    display: flex;
-    margin-right: 10px;
-}
 
 header nav a {
     text-decoration: none;
@@ -132,7 +137,7 @@ header nav .paginaActual {
 
 #goUp a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255)
 }
 
 main {
@@ -141,31 +146,32 @@ main {
 
 /*INICIO FOOTER*/
 footer {
-    background-image: linear-gradient(rgb(255, 255, 255), rgba(245, 238, 238, 0) 50%), url(../img/opcionfondo2.jpeg);
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(245, 238, 238, 0) 50%), url(../img/opcionfondo2.jpeg);
     color: rgb(85, 83, 83);
     width: 100%;
     justify-items: center;
+
+    .row {
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logofooter img {
+        width: 30vh;
+    }
+
+    a {
+        color: rgb(85, 83, 83);
+        transition: 0.5s;
+
+        .columnaredes a {
+            text-decoration: none;
+            font-size: 50px;
+            color: rgb(85, 83, 83);
+        }
+    }
 }
 
-footer .row {
-    align-items: center;
-    padding: 10px;
-}
-
-footer .logofooter img {
-    width: 30vh;
-}
-
-footer .columnaredes a {
-    text-decoration: none;
-    font-size: 50px;
-    color: rgb(85, 83, 83);
-}
-
-footer a {
-    color: rgb(85, 83, 83);
-    transition: 0.5s;
-}
 
 footer a:hover {
     color: black;
@@ -186,6 +192,8 @@ footer .columnaredes ul li {
 }
 
 /* FIN FOOTER */
+
+
 /*INICIO PAGINA INDEX*/
 .carousel-item {
     max-height: 60vh;
@@ -197,6 +205,7 @@ footer .columnaredes ul li {
 }
 
 .carousel-indicators li {
+
     background-color: rgb(56, 54, 54);
 }
 
@@ -224,15 +233,6 @@ footer .columnaredes ul li {
     padding: 0;
 }
 
-blockquote {
-    /* max-width: 100%; */
-}
-
-/* .imagenindex {
-    margin-top: 10px;
-    margin-right: 25px;
-    border-radius: 5px;
-} */
 /* FIN INDEX */
 /* PAGINA SERVICIOS*/
 .serv {
@@ -243,14 +243,14 @@ blockquote {
 }
 
 .serv:hover {
-    filter: grayscale(0%);
+    filter: grayscale(00%);
     transition: 1s;
 }
 
 .serv:hover h4 {
     color: rgb(34, 33, 33);
     text-shadow: none;
-    transition: 0.8s;
+    transition: .8s;
 }
 
 .serv h4 {
@@ -308,6 +308,7 @@ blockquote {
 }
 
 /* FIN PAGINA SERVICIOS */
+
 /*INICIO PAGINA GALERIA*/
 .img {
     border: 1px solid black;
@@ -384,6 +385,7 @@ blockquote {
 }
 
 /* FIN PAGINA GALERIA */
+
 /*INICIO PAGINA CONTACTO */
 .fieldsetContacto {
     width: 70%;
@@ -442,8 +444,15 @@ fieldset form input {
 }
 
 /* FIN PAGINA CONTACTO */
+
+
+
+
+
+
+
 /* mediaquerys */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width:1024px) {
 
     /* seccion Galeria */
     .gridGaleria {
@@ -452,12 +461,12 @@ fieldset form input {
         /* grid-template-rows: 400px 300px 350px 300px 300px; */
         gap: 6px 6px;
         grid-auto-flow: row;
-        grid-template-areas: 
-        "perro1 perro2 caballo caballo"
-        "castillo castillo casa estacion"
-        "mural BsAs BsAs BsAs"
-        "mural cancha1 cancha2 velero"
-        "scooter cancha3 cancha4 velero";
+        grid-template-areas:
+            "perro1 perro2 caballo caballo"
+            "castillo castillo casa estacion"
+            "mural BsAs BsAs BsAs"
+            "mural cancha1 cancha2 velero"
+            "scooter cancha3 cancha4 velero";
     }
 
     /* header */
@@ -475,9 +484,10 @@ fieldset form input {
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 250px 250px;
-        grid-template-areas: 
-        "talleres pedidos acrilicos" 
-        "murales mates estampitas";
+        grid-template-areas:
+            "talleres pedidos acrilicos"
+            "murales mates estampitas"
+        ;
     }
 
     .serviciosSection img {
@@ -499,11 +509,15 @@ fieldset form input {
     h2 {
         margin: 30px 25px;
     }
+
+
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width:768px) and (max-width:1023px) {
+
+
     .columna33 {
-        width: 33%;
+        width: calc(33%);
         overflow: hidden;
     }
 
@@ -516,12 +530,12 @@ fieldset form input {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 6px 6px;
-        grid-template-areas: 
-        "perro1 perro2 caballo"
-        "castillo casa estacion"
-        "mural BsAs BsAs"
-        "mural scooter cancha1"
-        "cancha2 cancha3 cancha4";
+        grid-template-areas:
+            "perro1 perro2 caballo"
+            "castillo casa estacion"
+            "mural BsAs BsAs"
+            "mural scooter cancha1"
+            "cancha2 cancha3 cancha4";
     }
 
     .img11 img {
@@ -560,9 +574,10 @@ fieldset form input {
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 250px 250px;
-        grid-template-areas: 
-        "talleres pedidos acrilicos"
-        "murales mates estampitas";
+        grid-template-areas:
+            "talleres pedidos acrilicos"
+            "murales mates estampitas"
+        ;
     }
 
     .serviciosSection img {
@@ -576,9 +591,11 @@ fieldset form input {
     }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width:576px) and (max-width:767px) {
+
+
     .columna33 {
-        width: 33%;
+        width: calc(33%);
         overflow: hidden;
     }
 
@@ -591,14 +608,14 @@ fieldset form input {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(7, 50vh);
-        grid-template-areas: 
-        "perro1 perro2"
-        "caballo castillo"
-        "casa estacion"
-        "BsAs BsAs"
-        "mural scooter"
-        "mural cancha1"
-        "cancha2 cancha3";
+        grid-template-areas:
+            "perro1 perro2"
+            "caballo castillo"
+            "casa estacion"
+            "BsAs BsAs"
+            "mural scooter"
+            "mural cancha1"
+            "cancha2 cancha3";
     }
 
     .img {
@@ -610,11 +627,12 @@ fieldset form input {
         display: grid;
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: calc((100vh - 139px) / 3) calc((100vh - 139px) / 3) calc((100vh - 139px) / 3);
+        grid-template-rows: calc((100vh - 139px)/3) calc((100vh - 139px)/3) calc((100vh - 139px)/3);
         grid-template-areas:
-        "talleres pedidos"
-        "acrilicos murales"
-        "mates estampitas";
+            "talleres pedidos"
+            "acrilicos murales"
+            "mates estampitas"
+        ;
     }
 
     .serv h4 {
@@ -626,6 +644,7 @@ fieldset form input {
         background-image: url(../img/taller.jpeg);
         background-position: center;
         background-size: cover;
+
     }
 
     #pedidos {
@@ -653,7 +672,7 @@ fieldset form input {
 
     #mates {
         height: 100vh;
-        background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
+        background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
         background-position: center;
         background-size: cover;
     }
@@ -661,7 +680,7 @@ fieldset form input {
     #estampitas {
         height: 100vh;
         background-size: cover;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
+        background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
     }
 
     .serviciosSection img {
@@ -670,7 +689,7 @@ fieldset form input {
 
     .serviciosSection p,
     h2 {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, .2);
     }
 
     /* footer pantallas chicas */
@@ -746,9 +765,11 @@ fieldset form input {
     .contactoLinea label {
         flex-shrink: 2;
     }
+
+
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width:576px) {
 
     /* INDEX */
     .imagenindex {
@@ -792,6 +813,8 @@ fieldset form input {
     .algunostrabajos .row .columna33 img {
         width: 100%;
     }
+
+
 
     main {
         width: 100%;
@@ -853,6 +876,7 @@ fieldset form input {
         background-image: url(../img/taller.jpeg);
         background-position: center;
         background-size: cover;
+
     }
 
     #pedidos {
@@ -872,7 +896,7 @@ fieldset form input {
 
     #mates {
         height: 100vh;
-        background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
+        background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
         background-position: center;
         background-size: cover;
     }
@@ -880,7 +904,7 @@ fieldset form input {
     #estampitas {
         height: 100vh;
         background-size: cover;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
+        background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
     }
 
     .serviciosSection img {
@@ -889,8 +913,6 @@ fieldset form input {
 
     .serviciosSection p,
     .serviciosSection h2 {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, .2);
     }
 }
-
-/*# sourceMappingURL=style.css.map */

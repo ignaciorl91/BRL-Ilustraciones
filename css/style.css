@@ -1,7 +1,7 @@
 /* generales */
 * {
     box-sizing: border-box;
-    font-family: "catamaran";
+    font-family: catamaran;
 }
 
 a {
@@ -23,6 +23,10 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
 }
 
 /*Personalizacion de scrollbar*/
@@ -76,7 +80,7 @@ header .menu {
     z-index: 2;
 }
 
-.menu ul {
+header .menu ul {
     display: flex;
     margin-right: 10px;
 }
@@ -105,7 +109,6 @@ header a:hover {
 header nav .paginaActual {
     border-top: 1px solid rgb(56, 54, 54);
     border-bottom: 1px solid rgb(56, 54, 54);
-    /* font-weight: 600; */
 }
 
 /* FIN HEADER */
@@ -156,15 +159,15 @@ footer .logofooter img {
     width: 30vh;
 }
 
+footer a {
+    color: rgb(85, 83, 83);
+    transition: 0.5s;
+}
+
 footer .columnaredes a {
     text-decoration: none;
     font-size: 50px;
     color: rgb(85, 83, 83);
-}
-
-footer a {
-    color: rgb(85, 83, 83);
-    transition: 0.5s;
 }
 
 footer a:hover {
@@ -210,29 +213,89 @@ footer .columnaredes ul li {
     margin-top: 5px;
 }
 
-.imgAlgunosTrabajos {
-    height: 50vh;
-    width: 100%;
+.testimonios h2 {
+    text-align: center;
 }
 
-.algunostrabajos {
-    margin: 0;
-    padding: 0;
+.gridInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 15px;
+    margin-top: 15px;
 }
 
-.cfAT {
-    padding: 0;
-}
-
-blockquote {
-    /* max-width: 100%; */
-}
-
-/* .imagenindex {
-    margin-top: 10px;
-    margin-right: 25px;
+.gridInicio .cuadro-1 {
+    height: 40vh;
+    padding: 15px;
     border-radius: 5px;
-} */
+    background-color: #31917e;
+    color: rgb(255, 255, 255);
+}
+
+.gridInicio .cuadro-1 p {
+    font-style: italic;
+}
+
+.gridInicio .cuadro-2 {
+    height: 40vh;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #287767;
+    color: rgb(255, 255, 255);
+}
+
+.gridInicio .cuadro-2 p {
+    font-style: italic;
+}
+
+.gridInicio .cuadro-3 {
+    height: 40vh;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #1f5c50;
+    color: rgb(255, 255, 255);
+}
+
+.gridInicio .cuadro-3 p {
+    font-style: italic;
+}
+
+.gridInicio .cuadro-4 {
+    height: 40vh;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #164138;
+    color: rgb(255, 255, 255);
+}
+
+.gridInicio .cuadro-4 p {
+    font-style: italic;
+}
+
+.gridInicio .cuadro-5 {
+    height: 40vh;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #0d2721;
+    color: rgb(255, 255, 255);
+}
+
+.gridInicio .cuadro-5 p {
+    font-style: italic;
+}
+
+.gridInicio .cuadro-6 {
+    height: 40vh;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #040c0a;
+    color: rgb(255, 255, 255);
+}
+
+.gridInicio .cuadro-6 p {
+    font-style: italic;
+}
+
 /* FIN INDEX */
 /* PAGINA SERVICIOS*/
 .serv {
@@ -255,7 +318,7 @@ blockquote {
 
 .serv h4 {
     color: white;
-    font-size: 4rem;
+    font-size: 2.8rem;
     max-width: 100%;
     text-shadow: 1px 1px 2px black;
 }
@@ -269,7 +332,7 @@ blockquote {
 
 .pedidos {
     grid-area: pedidos;
-    background-image: url(../img/DISCUS\ PECES\ con\ texto.jpg);
+    background-image: url(../img/peces.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -388,7 +451,7 @@ blockquote {
 .fieldsetContacto {
     width: 70%;
     margin: 15px 15% 15px 15%;
-    border: solid rgb(77, 73, 73) 1px;
+    border: solid rgb(85, 83, 83) 1px;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.326);
 }
 
@@ -452,12 +515,7 @@ fieldset form input {
         /* grid-template-rows: 400px 300px 350px 300px 300px; */
         gap: 6px 6px;
         grid-auto-flow: row;
-        grid-template-areas: 
-        "perro1 perro2 caballo caballo"
-        "castillo castillo casa estacion"
-        "mural BsAs BsAs BsAs"
-        "mural cancha1 cancha2 velero"
-        "scooter cancha3 cancha4 velero";
+        grid-template-areas: "perro1 perro2 caballo caballo""castillo castillo casa estacion""mural BsAs BsAs BsAs""mural cancha1 cancha2 velero""scooter cancha3 cancha4 velero";
     }
 
     /* header */
@@ -475,9 +533,7 @@ fieldset form input {
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 250px 250px;
-        grid-template-areas: 
-        "talleres pedidos acrilicos" 
-        "murales mates estampitas";
+        grid-template-areas: "talleres pedidos acrilicos""murales mates estampitas";
     }
 
     .serviciosSection img {
@@ -516,12 +572,7 @@ fieldset form input {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 6px 6px;
-        grid-template-areas: 
-        "perro1 perro2 caballo"
-        "castillo casa estacion"
-        "mural BsAs BsAs"
-        "mural scooter cancha1"
-        "cancha2 cancha3 cancha4";
+        grid-template-areas: "perro1 perro2 caballo""castillo casa estacion""mural BsAs BsAs""mural scooter cancha1""cancha2 cancha3 cancha4";
     }
 
     .img11 img {
@@ -560,9 +611,7 @@ fieldset form input {
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 250px 250px;
-        grid-template-areas: 
-        "talleres pedidos acrilicos"
-        "murales mates estampitas";
+        grid-template-areas: "talleres pedidos acrilicos""murales mates estampitas";
     }
 
     .serviciosSection img {
@@ -582,8 +631,8 @@ fieldset form input {
         overflow: hidden;
     }
 
-    .algunostrabajos .columna33 img {
-        width: 100%;
+    .gridInicio {
+        grid-template-columns: 1fr 1fr;
     }
 
     /* MEDIA GALERIA */
@@ -591,14 +640,7 @@ fieldset form input {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(7, 50vh);
-        grid-template-areas: 
-        "perro1 perro2"
-        "caballo castillo"
-        "casa estacion"
-        "BsAs BsAs"
-        "mural scooter"
-        "mural cancha1"
-        "cancha2 cancha3";
+        grid-template-areas: "perro1 perro2""caballo castillo""casa estacion""BsAs BsAs""mural scooter""mural cancha1""cancha2 cancha3";
     }
 
     .img {
@@ -611,10 +653,7 @@ fieldset form input {
         grid-gap: 15px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: calc((100vh - 139px) / 3) calc((100vh - 139px) / 3) calc((100vh - 139px) / 3);
-        grid-template-areas:
-        "talleres pedidos"
-        "acrilicos murales"
-        "mates estampitas";
+        grid-template-areas: "talleres pedidos""acrilicos murales""mates estampitas";
     }
 
     .serv h4 {
@@ -752,51 +791,30 @@ fieldset form input {
 
     /* INDEX */
     .imagenindex {
-        position: absolute;
-        z-index: -1;
-        filter: contrast(60%);
-        width: 100%;
-        border-radius: 0;
-        padding: 0;
-        margin: 0;
+        display: none;
     }
 
-    aside h2 {
-        text-align: center;
+    .sobremi {
+        padding: 0;
+        margin: 8px 0;
     }
 
     aside {
         text-align: justify;
         color: white;
         padding: 20px;
+        padding-bottom: 30vh;
+        background-image: url(../img/cuadroybelen.jpg);
+        background-size: cover;
     }
 
-    .algunostrabajos {
-        padding-top: 5px;
-        color: rgb(85, 83, 83);
-        background-color: rgb(245, 238, 238);
-    }
-
-    main .algunostrabajos h2 {
+    aside h2 {
         text-align: center;
     }
 
-    .algunostrabajos .row {
-        display: block;
-    }
-
-    .algunostrabajos .row .columna33 {
-        width: 100%;
-    }
-
-    .algunostrabajos .row .columna33 img {
-        width: 100%;
-    }
-
-    main {
-        width: 100%;
-        padding: 0;
-        margin: 0;
+    .gridInicio {
+        grid-template-columns: 1fr;
+        margin: 15px 10px;
     }
 
     .gridGaleria {
@@ -865,6 +883,14 @@ fieldset form input {
     #acrilicos {
         height: 100vh;
         background-image: url(../img/acrilico.jpeg);
+        background-position: center;
+        background-size: cover;
+        filter: contrast(100%);
+    }
+
+    #murales {
+        height: 100vh;
+        background-image: url(../img/mural.jpg);
         background-position: center;
         background-size: cover;
         filter: contrast(100%);

@@ -1,6 +1,13 @@
 /* generales */
 $fuente1: catamaran;
 
+$colores:(
+    c1: rgb(56, 54, 54),
+    c2: rgb(255, 255, 255),
+    c3: #3aac95,
+    c4: rgb(85, 83, 83),
+);
+
 * {
     box-sizing: border-box;
     font-family: $fuente1;
@@ -25,6 +32,9 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
+}
+body{
+    background-color: map-get($colores, c2 );
 }
 
 /*Personalizacion de scrollbar*/
@@ -57,7 +67,7 @@ body::-webkit-scrollbar-thumb {
 
 /*  INICIO HEADER */
 header {
-    background-image: linear-gradient(rgba(245, 238, 238, 0) 50%, rgba(255, 255, 255, 1)), url(../img/opcionfondo2.jpeg);
+    background-image: linear-gradient(rgba(245, 238, 238, 0) 50%, map-get($colores, c2)), url(../img/opcionfondo2.jpeg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,7 +76,6 @@ header {
     margin: 0px;
     z-index: 1;
     position: relative;
-
     img {
         margin-left: 15px;
         width: 200px;
@@ -75,7 +84,6 @@ header {
     .menu {
         margin-right: 0px;
         z-index: 2;
-
         ul {
             display: flex;
             margin-right: 10px;
@@ -84,11 +92,9 @@ header {
 }
 
 
-
-
 header nav a {
     text-decoration: none;
-    color: rgb(56, 54, 54);
+    color: map-get($colores, c1);
     font-size: 18px;
     padding: 1px 15px 1px;
     margin-left: 6px;
@@ -97,23 +103,22 @@ header nav a {
 }
 
 header a:hover {
-    border-top: 1px solid rgb(56, 54, 54);
-    border-bottom: 1px solid rgb(56, 54, 54);
+    border-top: 1px solid map-get($colores, c1);
+    border-bottom: 1px solid map-get($colores, c1);
     transition: all 0.4s;
     font-weight: 600;
     /* esto esta para corregir boostrap */
-    color: rgb(56, 54, 54);
+    color: map-get($colores, c1);
     text-decoration: none;
     /* fin correccion boostrap  */
 }
 
 header nav .paginaActual {
-    border-top: 1px solid rgb(56, 54, 54);
-    border-bottom: 1px solid rgb(56, 54, 54);
-    /* font-weight: 600; */
+    border-top: 1px solid map-get($colores, c1);
+    border-bottom: 1px solid map-get($colores, c1);
 }
-
 /* FIN HEADER */
+
 /*boton para volver arriba*/
 #goUp {
     position: fixed;
@@ -137,7 +142,7 @@ header nav .paginaActual {
 
 #goUp a {
     text-decoration: none;
-    color: rgb(255, 255, 255)
+    color: map-get($colores, c2)
 }
 
 main {
@@ -146,8 +151,8 @@ main {
 
 /*INICIO FOOTER*/
 footer {
-    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(245, 238, 238, 0) 50%), url(../img/opcionfondo2.jpeg);
-    color: rgb(85, 83, 83);
+    background-image: linear-gradient(map-get($colores, c2 ), rgba(245, 238, 238, 0) 50%), url(../img/opcionfondo2.jpeg);
+    color: map-get($colores, c4);
     width: 100%;
     justify-items: center;
 
@@ -161,14 +166,13 @@ footer {
     }
 
     a {
-        color: rgb(85, 83, 83);
+        color:  map-get($colores, c4);
         transition: 0.5s;
-
-        .columnaredes a {
-            text-decoration: none;
-            font-size: 50px;
-            color: rgb(85, 83, 83);
-        }
+    }
+    .columnaredes a {
+        text-decoration: none;
+        font-size: 50px;
+        color:  map-get($colores, c4);
     }
 }
 
@@ -206,12 +210,12 @@ footer .columnaredes ul li {
 
 .carousel-indicators li {
 
-    background-color: rgb(56, 54, 54);
+    background-color: map-get($colores, c1);
 }
 
 .fa-angle-left,
 .fa-angle-right {
-    color: rgb(56, 54, 54);
+    color: map-get($colores, c1);
     font-size: 2rem;
 }
 
@@ -219,19 +223,37 @@ footer .columnaredes ul li {
     margin-top: 5px;
 }
 
-.imgAlgunosTrabajos {
-    height: 50vh;
-    width: 100%;
+.testimonios h2 {
+    text-align: center;
 }
 
-.algunostrabajos {
-    margin: 0;
-    padding: 0;
+@mixin boxes {
+    height: 40vh;
+    padding: 15px;
+    border-radius: 5px;
+    p {
+        font-style: italic;
+    }
 }
 
-.cfAT {
-    padding: 0;
+.gridInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 15px;
+    margin-top: 15px;
+
+
+
+    @for $i from 1 through 6 {
+        .cuadro-#{$i} {
+            @include boxes;
+            background-color: darken($color: map-get($colores, c3), $amount: $i * 7%);
+            color: rgb(255, 255, 255);
+        }
+    }
+
 }
+
 
 /* FIN INDEX */
 /* PAGINA SERVICIOS*/
@@ -255,7 +277,7 @@ footer .columnaredes ul li {
 
 .serv h4 {
     color: white;
-    font-size: 4rem;
+    font-size: 2.8rem;
     max-width: 100%;
     text-shadow: 1px 1px 2px black;
 }
@@ -269,7 +291,7 @@ footer .columnaredes ul li {
 
 .pedidos {
     grid-area: pedidos;
-    background-image: url(../img/DISCUS\ PECES\ con\ texto.jpg);
+    background-image: url(../img/peces.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -390,7 +412,7 @@ footer .columnaredes ul li {
 .fieldsetContacto {
     width: 70%;
     margin: 15px 15% 15px 15%;
-    border: solid rgb(77, 73, 73) 1px;
+    border: solid map-get($colores, c4) 1px;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.326);
 }
 
@@ -599,8 +621,8 @@ fieldset form input {
         overflow: hidden;
     }
 
-    .algunostrabajos .columna33 img {
-        width: 100%;
+    .gridInicio {
+        grid-template-columns: 1fr 1fr;
     }
 
     /* MEDIA GALERIA */
@@ -773,54 +795,32 @@ fieldset form input {
 
     /* INDEX */
     .imagenindex {
-        position: absolute;
-        z-index: -1;
-        filter: contrast(60%);
-        width: 100%;
-        border-radius: 0;
-        padding: 0;
-        margin: 0;
+        display: none;
     }
 
-    aside h2 {
-        text-align: center;
+    .sobremi {
+        padding: 0;
+        margin: 8px 0;
     }
 
     aside {
         text-align: justify;
         color: white;
         padding: 20px;
+        padding-bottom: 30vh;
+        background-image: url(../img/cuadroybelen.jpg);
+        background-size: cover;
+
+        h2 {
+            text-align: center;
+        }
     }
 
-    .algunostrabajos {
-        padding-top: 5px;
-        color: rgb(85, 83, 83);
-        background-color: rgb(245, 238, 238);
+    .gridInicio {
+        grid-template-columns: 1fr;
+        margin: 15px 10px;
     }
 
-    main .algunostrabajos h2 {
-        text-align: center;
-    }
-
-    .algunostrabajos .row {
-        display: block;
-    }
-
-    .algunostrabajos .row .columna33 {
-        width: 100%;
-    }
-
-    .algunostrabajos .row .columna33 img {
-        width: 100%;
-    }
-
-
-
-    main {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
 
     .gridGaleria {
         /* grid-template-columns: 1fr; */
@@ -889,6 +889,13 @@ fieldset form input {
     #acrilicos {
         height: 100vh;
         background-image: url(../img/acrilico.jpeg);
+        background-position: center;
+        background-size: cover;
+        filter: contrast(100%);
+    }
+    #murales {
+        height: 100vh;
+        background-image: url(../img/mural.jpg);
         background-position: center;
         background-size: cover;
         filter: contrast(100%);

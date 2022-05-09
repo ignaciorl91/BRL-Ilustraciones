@@ -1,19 +1,19 @@
 /* generales */
 * {
-    box-sizing: border-box;
-    font-family: catamaran;
+  box-sizing: border-box;
+  font-family: catamaran;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -22,901 +22,920 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 /*Personalizacion de scrollbar*/
 body::-webkit-scrollbar {
-    width: 10px;
-    border-radius: 50px;
-    background: rgba(53, 121, 106, 0.2);
+  width: 10px;
+  border-radius: 50px;
+  background: rgba(53, 121, 106, 0.2);
 }
 
 body::-webkit-scrollbar-thumb {
-    background: rgba(6, 58, 22, 0.5);
-    border-radius: 100px;
+  background: rgba(6, 58, 22, 0.5);
+  border-radius: 100px;
 }
 
 /*dentro de esta clase estan las columnas de distintos porcentajes (25%, 33% y 50%)*/
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* define columnas de determinado % de pantalla, se ubican en div row */
 /* columna25 y 50 eliminadas por obsoletas */
 /*columna33 vigente en index  y footer */
 .columna33 {
-    width: 33.3%;
-    text-align: center;
+  width: 33.3%;
+  text-align: center;
 }
 
 /*  INICIO HEADER */
 header {
-    background-image: linear-gradient(rgba(245, 238, 238, 0) 50%, rgb(255, 255, 255)), url(../img/opcionfondo2.jpeg);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    z-index: 1;
-    position: relative;
+  background-image: linear-gradient(rgba(245, 238, 238, 0) 50%, rgb(255, 255, 255)), url(../img/opcionfondo2.jpeg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  z-index: 1;
+  position: relative;
 }
-
 header img {
-    margin-left: 15px;
-    width: 200px;
+  margin-left: 15px;
+  width: 200px;
 }
-
 header .menu {
-    margin-right: 0px;
-    z-index: 2;
+  margin-right: 0px;
+  z-index: 2;
 }
-
 header .menu ul {
-    display: flex;
-    margin-right: 10px;
+  display: flex;
+  margin-right: 10px;
 }
 
-header nav a {
-    text-decoration: none;
-    color: rgb(56, 54, 54);
-    font-size: 18px;
-    padding: 1px 15px 1px;
-    margin-left: 6px;
-    font-weight: 500;
-    z-index: 2;
+header a {
+  text-decoration: none;
+  color: rgb(56, 54, 54);
+  font-size: 18px;
+  padding: 1px 15px 1px;
+  margin-left: 6px;
+  font-weight: 500;
+  z-index: 2;
 }
 
-header a:hover {
-    border-top: 1px solid rgb(56, 54, 54);
-    border-bottom: 1px solid rgb(56, 54, 54);
-    transition: all 0.4s;
-    font-weight: 600;
-    /* esto esta para corregir boostrap */
-    color: rgb(56, 54, 54);
-    text-decoration: none;
-    /* fin correccion boostrap  */
+header nav a:hover {
+  border-top: 1px solid rgb(56, 54, 54);
+  border-bottom: 1px solid rgb(56, 54, 54);
+  transition: all 0.4s;
+  font-weight: 600;
+  /* esto esta para corregir boostrap */
+  color: rgb(56, 54, 54);
+  text-decoration: none;
+  /* fin correccion boostrap  */
 }
 
 header nav .paginaActual {
-    border-top: 1px solid rgb(56, 54, 54);
-    border-bottom: 1px solid rgb(56, 54, 54);
+  border-top: 1px solid rgb(56, 54, 54);
+  border-bottom: 1px solid rgb(56, 54, 54);
 }
 
 /* FIN HEADER */
 /*boton para volver arriba*/
 #goUp {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-image: url(../img/favicon.png);
-    filter: saturate(50%);
-    background-size: cover;
-    border-radius: 30%;
-    width: 50px;
-    height: 54px;
-    z-index: 1;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-image: url(../img/favicon.png);
+  filter: saturate(50%);
+  background-size: cover;
+  border-radius: 30%;
+  width: 50px;
+  height: 54px;
+  z-index: 1;
 }
 
 #goUp h2 {
-    text-align: center;
-    font-size: 25px;
-    margin: 0;
-    padding-top: 15px;
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+  padding-top: 15px;
 }
 
 #goUp a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
 main {
-    margin: 10px 10px;
+  margin: 10px 10px;
 }
 
 /*INICIO FOOTER*/
 footer {
-    background-image: linear-gradient(rgb(255, 255, 255), rgba(245, 238, 238, 0) 50%), url(../img/opcionfondo2.jpeg);
-    color: rgb(85, 83, 83);
-    width: 100%;
-    justify-items: center;
+  background-image: linear-gradient(rgb(255, 255, 255), rgba(245, 238, 238, 0) 50%), url(../img/opcionfondo2.jpeg);
+  color: rgb(85, 83, 83);
+  width: 100%;
+  justify-items: center;
 }
-
 footer .row {
-    align-items: center;
-    padding: 10px;
+  align-items: center;
+  padding: 10px;
 }
-
 footer .logofooter img {
-    width: 30vh;
+  width: 30vh;
 }
-
 footer a {
-    color: rgb(85, 83, 83);
-    transition: 0.5s;
+  color: rgb(85, 83, 83);
+  transition: 0.5s;
 }
-
 footer .columnaredes a {
-    text-decoration: none;
-    font-size: 50px;
-    color: rgb(85, 83, 83);
+  text-decoration: none;
+  font-size: 50px;
+  color: rgb(85, 83, 83);
 }
 
 footer a:hover {
-    color: black;
-    transition: 0.5s;
+  color: black;
+  transition: 0.5s;
 }
 
 footer ul li {
-    padding: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
 }
 
 footer .columnaredes ul {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 footer .columnaredes ul li {
-    padding: 15px;
+  padding: 15px;
 }
 
 /* FIN FOOTER */
 /*INICIO PAGINA INDEX*/
 .carousel-item {
-    max-height: 60vh;
+  max-height: 60vh;
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 60vh;
+  width: 100%;
+  height: 60vh;
 }
 
 .carousel-indicators li {
-    background-color: rgb(56, 54, 54);
+  background-color: rgb(56, 54, 54);
 }
 
 .fa-angle-left,
 .fa-angle-right {
-    color: rgb(56, 54, 54);
-    font-size: 2rem;
+  color: rgb(56, 54, 54);
+  font-size: 2rem;
 }
 
 .sobremi {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .testimonios h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .gridInicio {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px 15px;
-    margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 15px;
+  margin-top: 15px;
 }
-
 .gridInicio .cuadro-1 {
-    height: 40vh;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #31917e;
-    color: rgb(255, 255, 255);
+  height: 40vh;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #31917e;
+  color: rgb(255, 255, 255);
 }
-
 .gridInicio .cuadro-1 p {
-    font-style: italic;
+  font-style: italic;
 }
-
 .gridInicio .cuadro-2 {
-    height: 40vh;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #287767;
-    color: rgb(255, 255, 255);
+  height: 40vh;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #287767;
+  color: rgb(255, 255, 255);
 }
-
 .gridInicio .cuadro-2 p {
-    font-style: italic;
+  font-style: italic;
 }
-
 .gridInicio .cuadro-3 {
-    height: 40vh;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #1f5c50;
-    color: rgb(255, 255, 255);
+  height: 40vh;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #1f5c50;
+  color: rgb(255, 255, 255);
 }
-
 .gridInicio .cuadro-3 p {
-    font-style: italic;
+  font-style: italic;
 }
-
 .gridInicio .cuadro-4 {
-    height: 40vh;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #164138;
-    color: rgb(255, 255, 255);
+  height: 40vh;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #164138;
+  color: rgb(255, 255, 255);
 }
-
 .gridInicio .cuadro-4 p {
-    font-style: italic;
+  font-style: italic;
 }
-
 .gridInicio .cuadro-5 {
-    height: 40vh;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #0d2721;
-    color: rgb(255, 255, 255);
+  height: 40vh;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #0d2721;
+  color: rgb(255, 255, 255);
 }
-
 .gridInicio .cuadro-5 p {
-    font-style: italic;
+  font-style: italic;
 }
-
 .gridInicio .cuadro-6 {
-    height: 40vh;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #040c0a;
-    color: rgb(255, 255, 255);
+  height: 40vh;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #040c0a;
+  color: rgb(255, 255, 255);
 }
-
 .gridInicio .cuadro-6 p {
-    font-style: italic;
+  font-style: italic;
 }
 
 /* FIN INDEX */
 /* PAGINA SERVICIOS*/
 .serv {
-    display: flex;
-    height: 100%;
-    filter: grayscale(70%);
-    justify-content: center;
+  display: flex;
+  height: 100%;
+  filter: grayscale(70%);
+  justify-content: center;
 }
 
 .serv:hover {
-    filter: grayscale(0%);
-    transition: 1s;
+  filter: grayscale(0%);
+  transition: 1s;
 }
 
 .serv:hover h4 {
-    color: rgb(34, 33, 33);
-    text-shadow: none;
-    transition: 0.8s;
+  color: rgb(34, 33, 33);
+  text-shadow: none;
+  transition: 0.8s;
 }
 
 .serv h4 {
-    color: white;
-    font-size: 2.8rem;
-    max-width: 100%;
-    text-shadow: 1px 1px 2px black;
+  color: white;
+  font-size: 2.8rem;
+  max-width: 100%;
+  text-shadow: 1px 1px 2px black;
 }
 
 .talleres {
-    grid-area: talleres;
-    background-image: url(../img/taller.jpeg);
-    background-position: 12px 55%;
-    background-size: cover;
+  grid-area: talleres;
+  background-image: url(../img/taller.jpeg);
+  background-position: 12px 55%;
+  background-size: cover;
 }
 
 .pedidos {
-    grid-area: pedidos;
-    background-image: url(../img/peces.jpg);
-    background-size: cover;
-    background-position: center;
+  grid-area: pedidos;
+  background-image: url(../img/peces.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .acrilicos {
-    grid-area: acrilicos;
-    background-image: url(../img/acrilico.jpeg);
-    background-size: cover;
-    background-position: center;
+  grid-area: acrilicos;
+  background-image: url(../img/acrilico.jpeg);
+  background-size: cover;
+  background-position: center;
 }
 
 .murales {
-    grid-area: murales;
-    background-image: url(../img/paleta.jpeg);
-    background-size: cover;
-    background-position: 100% 30%;
+  grid-area: murales;
+  background-image: url(../img/paleta.jpeg);
+  background-size: cover;
+  background-position: 100% 30%;
 }
 
 .mates {
-    grid-area: mates;
-    background-image: url(../img/mates.jpg);
-    background-size: cover;
-    background-position: 100% 70%;
+  grid-area: mates;
+  background-image: url(../img/mates.jpg);
+  background-size: cover;
+  background-position: 100% 70%;
 }
 
 .estampitas {
-    grid-area: estampitas;
-    background-image: url(../img/estampitas.jpeg);
-    background-size: cover;
-    background-position: 100% 40%;
+  grid-area: estampitas;
+  background-image: url(../img/estampitas.jpeg);
+  background-size: cover;
+  background-position: 100% 40%;
 }
 
 .serviciosSection {
-    display: flex;
-    margin-top: 15px;
+  display: flex;
+  margin-top: 15px;
 }
 
 /* FIN PAGINA SERVICIOS */
 /*INICIO PAGINA GALERIA*/
 .img {
-    border: 1px solid black;
-    margin: 5px;
-    transition: all 0.7s;
-    border-radius: 10px;
+  border: 1px solid black;
+  margin: 5px;
+  transition: all 0.7s;
+  border-radius: 10px;
 }
 
 .img img {
-    width: 100%;
-    border-radius: 10px;
-    height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
 }
 
 .img:hover {
-    transform: scale(1.1);
-    transition: all 0.7s;
+  transform: scale(1.1);
+  transition: all 0.7s;
 }
 
 .img1 {
-    grid-area: caballo;
+  grid-area: caballo;
 }
 
 .img2 {
-    grid-area: perro1;
+  grid-area: perro1;
 }
 
 .img3 {
-    grid-area: perro2;
+  grid-area: perro2;
 }
 
 .img4 {
-    grid-area: castillo;
+  grid-area: castillo;
 }
 
 .img5 {
-    grid-area: casa;
+  grid-area: casa;
 }
 
 .img6 {
-    grid-area: estacion;
+  grid-area: estacion;
 }
 
 .img7 {
-    grid-area: mural;
+  grid-area: mural;
 }
 
 .img8 {
-    grid-area: BsAs;
+  grid-area: BsAs;
 }
 
 .img9 {
-    grid-area: cancha1;
+  grid-area: cancha1;
 }
 
 .img10 {
-    grid-area: cancha2;
+  grid-area: cancha2;
 }
 
 .img11 {
-    grid-area: velero;
+  grid-area: velero;
 }
 
 .img12 {
-    grid-area: cancha3;
+  grid-area: cancha3;
 }
 
 .img13 {
-    grid-area: cancha4;
+  grid-area: cancha4;
 }
 
 .img14 {
-    grid-area: scooter;
+  grid-area: scooter;
 }
 
 /* FIN PAGINA GALERIA */
 /*INICIO PAGINA CONTACTO */
 .fieldsetContacto {
-    width: 70%;
-    margin: 15px 15% 15px 15%;
-    border: solid rgb(85, 83, 83) 1px;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.326);
+  width: 70%;
+  margin: 15px 15% 15px 15%;
+  border: solid rgb(85, 83, 83) 1px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.326);
 }
 
 .fieldsetContacto legend {
-    width: auto;
+  width: auto;
 }
 
 .formContacto {
-    padding: 5px 10px;
+  padding: 5px 10px;
 }
 
 fieldset form input {
-    padding: 1px !important;
+  padding: 1px !important;
 }
 
 .contactoLinea {
-    display: flex;
-    margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .contactoLinea2 {
-    /* display: flex; */
-    margin-bottom: 10px;
+  /* display: flex; */
+  margin-bottom: 10px;
 }
 
 .formContacto label {
-    padding: 5px 10px;
+  padding: 5px 10px;
 }
 
 .formContacto .contactoLinea label {
-    display: block;
-    width: 10rem;
+  display: block;
+  width: 10rem;
 }
 
 .formContacto .contactoLinea input {
-    display: block;
-    width: 40%;
-    padding: 5px 50px;
-    margin: 5px;
+  display: block;
+  width: 40%;
+  padding: 5px 50px;
+  margin: 5px;
 }
 
 .formContacto textarea {
-    width: calc(100% - 20px);
-    margin: 5px 10px;
-    height: 20vh;
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  height: 20vh;
 }
 
 .mapa {
-    width: 70%;
-    margin-left: 15%;
+  width: 70%;
+  margin-left: 15%;
 }
 
 /* FIN PAGINA CONTACTO */
 /* mediaquerys */
 @media only screen and (min-width: 1024px) {
+  /* seccion Galeria */
+  .gridGaleria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 400px 300px 350px 300px 300px; */
+    gap: 6px 6px;
+    grid-auto-flow: row;
+    grid-template-areas: "perro1 perro2 caballo caballo" "castillo castillo casa estacion" "mural BsAs BsAs BsAs" "mural cancha1 cancha2 velero" "scooter cancha3 cancha4 velero";
+  }
 
-    /* seccion Galeria */
-    .gridGaleria {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        /* grid-template-rows: 400px 300px 350px 300px 300px; */
-        gap: 6px 6px;
-        grid-auto-flow: row;
-        grid-template-areas: "perro1 perro2 caballo caballo""castillo castillo casa estacion""mural BsAs BsAs BsAs""mural cancha1 cancha2 velero""scooter cancha3 cancha4 velero";
-    }
+  /* header */
+  .hamb {
+    display: none;
+  }
 
-    /* header */
-    .hamb {
-        display: none;
-    }
+  .Xmenu {
+    display: none;
+  }
 
-    .Xmenu {
-        display: none;
-    }
+  /* SERVIVIOS */
+  .gridServicios {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    grid-template-areas: "talleres pedidos acrilicos" "murales mates estampitas";
+  }
 
-    /* SERVIVIOS */
-    .gridServicios {
-        display: grid;
-        grid-gap: 15px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 250px 250px;
-        grid-template-areas: "talleres pedidos acrilicos""murales mates estampitas";
-    }
+  .serviciosSection img {
+    height: 100vh;
+    max-width: 70%;
+  }
 
-    .serviciosSection img {
-        height: 100vh;
-        max-width: 70%;
-    }
+  .serviciosSection p,
+h2 {
+    margin: 30px 25px;
+  }
 
-    .serviciosSection p,
-    h2 {
-        margin: 30px 25px;
-    }
+  .serviciosSection img {
+    height: 100vh;
+    max-width: 70%;
+  }
 
-    .serviciosSection img {
-        height: 100vh;
-        max-width: 70%;
-    }
-
-    .serviciosSection p,
-    h2 {
-        margin: 30px 25px;
-    }
+  .serviciosSection p,
+h2 {
+    margin: 30px 25px;
+  }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .columna33 {
-        width: 33%;
-        overflow: hidden;
-    }
+  .columna33 {
+    width: 33%;
+    overflow: hidden;
+  }
 
-    .algunostrabajos .columna33 img {
-        width: 100%;
-    }
+  .algunostrabajos .columna33 img {
+    width: 100%;
+  }
 
-    /* Galeria */
-    .gridGaleria {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 6px 6px;
-        grid-template-areas: "perro1 perro2 caballo""castillo casa estacion""mural BsAs BsAs""mural scooter cancha1""cancha2 cancha3 cancha4";
-    }
+  /* Galeria */
+  .gridGaleria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px 6px;
+    grid-template-areas: "perro1 perro2 caballo" "castillo casa estacion" "mural BsAs BsAs" "mural scooter cancha1" "cancha2 cancha3 cancha4";
+  }
 
-    .img11 img {
-        display: none;
-    }
+  .img11 img {
+    display: none;
+  }
 
-    /* footer */
-    footer .logofooter img {
-        width: 20vh;
-    }
+  /* footer */
+  footer .logofooter img {
+    width: 20vh;
+  }
 
-    footer .columnaredes a {
-        font-size: 35px;
-    }
+  footer .columnaredes a {
+    font-size: 35px;
+  }
 
-    footer .columnaredes {
-        padding: auto;
-    }
+  footer .columnaredes {
+    padding: auto;
+  }
 
-    footer .columna33 li {
-        font-size: 15px;
-    }
+  footer .columna33 li {
+    font-size: 15px;
+  }
 
-    /* header */
-    .hamb {
-        display: none;
-    }
+  /* header */
+  .hamb {
+    display: none;
+  }
 
-    .Xmenu {
-        display: none;
-    }
+  .Xmenu {
+    display: none;
+  }
 
-    /* SERVICIOS */
-    .gridServicios {
-        display: grid;
-        grid-gap: 15px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 250px 250px;
-        grid-template-areas: "talleres pedidos acrilicos""murales mates estampitas";
-    }
+  /* SERVICIOS */
+  .gridServicios {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    grid-template-areas: "talleres pedidos acrilicos" "murales mates estampitas";
+  }
 
-    .serviciosSection img {
-        height: 100vh;
-        max-width: 70%;
-    }
+  .serviciosSection img {
+    height: 100vh;
+    max-width: 70%;
+  }
 
-    .serviciosSection p,
-    h2 {
-        margin: 30px 25px;
-    }
+  .serviciosSection p,
+h2 {
+    margin: 30px 25px;
+  }
 }
-
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .columna33 {
-        width: 33%;
-        overflow: hidden;
-    }
+  .columna33 {
+    width: 33%;
+    overflow: hidden;
+  }
 
-    .gridInicio {
-        grid-template-columns: 1fr 1fr;
-    }
+  .gridInicio {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    /* MEDIA GALERIA */
-    .gridGaleria {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(7, 50vh);
-        grid-template-areas: "perro1 perro2""caballo castillo""casa estacion""BsAs BsAs""mural scooter""mural cancha1""cancha2 cancha3";
-    }
+  /* MEDIA GALERIA */
+  .gridGaleria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, 50vh);
+    grid-template-areas: "perro1 perro2" "caballo castillo" "casa estacion" "BsAs BsAs" "mural scooter" "mural cancha1" "cancha2 cancha3";
+  }
 
-    .img {
-        background-size: cover;
-    }
+  .img {
+    background-size: cover;
+  }
 
-    /* MEDIA SERVICIOS */
-    .gridServicios {
-        display: grid;
-        grid-gap: 15px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: calc((100vh - 139px) / 3) calc((100vh - 139px) / 3) calc((100vh - 139px) / 3);
-        grid-template-areas: "talleres pedidos""acrilicos murales""mates estampitas";
-    }
+  /* MEDIA SERVICIOS */
+  .gridServicios {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: calc((100vh - 139px) / 3) calc((100vh - 139px) / 3) calc((100vh - 139px) / 3);
+    grid-template-areas: "talleres pedidos" "acrilicos murales" "mates estampitas";
+  }
 
-    .serv h4 {
-        font-size: 50px;
-    }
+  .serv h4 {
+    font-size: 50px;
+  }
 
-    #talleres {
-        height: 100vh;
-        background-image: url(../img/taller.jpeg);
-        background-position: center;
-        background-size: cover;
-    }
+  #talleres {
+    height: 100vh;
+    background-image: url(../img/taller.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
 
-    #pedidos {
-        height: 100vh;
-        background-image: url(../img/perros4.jpg);
-        background-position: center;
-        background-size: cover;
-    }
+  #pedidos {
+    height: 100vh;
+    background-image: url(../img/perros4.jpg);
+    background-position: center;
+    background-size: cover;
+  }
 
-    #acrilicos {
-        height: 100vh;
-        background-image: url(../img/acrilico.jpeg);
-        background-position: center;
-        background-size: cover;
-        filter: contrast(100%);
-    }
+  #acrilicos {
+    height: 100vh;
+    background-image: url(../img/acrilico.jpeg);
+    background-position: center;
+    background-size: cover;
+    filter: contrast(100%);
+  }
 
-    #murales {
-        height: 100vh;
-        background-image: url(../img/mural.jpg);
-        background-position: center;
-        background-size: cover;
-        filter: contrast(100%);
-    }
+  #murales {
+    height: 100vh;
+    background-image: url(../img/mural.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: contrast(100%);
+  }
 
-    #mates {
-        height: 100vh;
-        background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
-        background-position: center;
-        background-size: cover;
-    }
+  #mates {
+    height: 100vh;
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
+    background-position: center;
+    background-size: cover;
+  }
 
-    #estampitas {
-        height: 100vh;
-        background-size: cover;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
-    }
+  #estampitas {
+    height: 100vh;
+    background-size: cover;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
+  }
 
-    .serviciosSection img {
-        display: none;
-    }
+  .serviciosSection img {
+    display: none;
+  }
 
-    .serviciosSection p,
-    h2 {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
+  .serviciosSection p,
+h2 {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 
-    /* footer pantallas chicas */
-    footer .row {
-        display: block;
-    }
+  /* footer pantallas chicas */
+  footer .row {
+    display: block;
+  }
 
-    footer .columna33 {
-        width: 100%;
-        justify-content: center;
-    }
+  footer .columna33 {
+    width: 100%;
+    justify-content: center;
+  }
 
-    footer .columna33 ul {
-        justify-content: center;
-        padding: 0;
-    }
+  footer .columna33 ul {
+    justify-content: center;
+    padding: 0;
+  }
 
-    /* header */
-    .hamb {
-        margin-right: 16px;
-    }
+  /* header */
+  .hamb {
+    margin-right: 16px;
+    display: block;
+    font-size: 30px;
+    position: relative;
+    z-index: 4;
+    color: rgb(56, 54, 54);
+  }
+  .hamb a {
+    text-decoration: none;
+  }
 
-    .menu {
-        position: fixed;
-        width: 220px;
-        height: 100%;
-        background-color: white;
-        padding-top: 20px;
-        top: 0;
-        right: 0;
-        transition: all 1.8s ease;
-        transform: translateX(100%);
-    }
+  .menu {
+    position: fixed;
+    width: 50vw;
+    height: 100%;
+    background-color: white;
+    padding-top: 20px;
+    top: 0;
+    right: 0;
+    transition: all 0.8s ease;
+    transform: translateX(100%);
+    z-index: 8;
+  }
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu ul li {
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgb(56, 54, 54);
+  }
+  .menu ul li a {
+    border: none;
+    font-size: 2rem;
+  }
 
-    header .menu .Xmenu {
-        padding-left: 70%;
-    }
+  .menu.open {
+    transform: translateX(0);
+  }
 
-    header .menu .Xmenu a {
-        color: black;
-        background-color: transparent;
-    }
+  /* CONTACTO */
+  .fieldsetContacto {
+    width: 90%;
+    margin: auto;
+    padding: 3px;
+  }
 
-    .menu ul {
-        flex-direction: column;
-    }
+  .formContacto {
+    padding: 0;
+  }
 
-    .menu ul li {
-        padding-bottom: 20px;
-    }
+  .contactoLinea input {
+    flex-shrink: 3;
+  }
 
-    .menu ul li a {
-        background-color: transparent;
-        color: black;
-        border-bottom: solid 1px black;
-    }
-
-    /* CONTACTO */
-    .fieldsetContacto {
-        width: 90%;
-        margin: auto;
-        padding: 3px;
-    }
-
-    .formContacto {
-        padding: 0;
-    }
-
-    .contactoLinea input {
-        flex-shrink: 3;
-    }
-
-    .contactoLinea label {
-        flex-shrink: 2;
-    }
+  .contactoLinea label {
+    flex-shrink: 2;
+  }
 }
-
 @media only screen and (max-width: 576px) {
+  /* header */
+  .hamb {
+    margin-right: 16px;
+    display: block;
+    font-size: 30px;
+    position: relative;
+    z-index: 4;
+    color: rgb(56, 54, 54);
+  }
+  .hamb a {
+    text-decoration: none;
+  }
 
-    /* INDEX */
-    .imagenindex {
-        display: none;
-    }
+  .menu {
+    position: fixed;
+    width: 80vw;
+    height: 100%;
+    background-color: white;
+    padding-top: 20px;
+    top: 0;
+    right: 0;
+    transition: all 0.8s ease;
+    transform: translateX(100%);
+    z-index: 8;
+  }
+  .menu ul {
+    margin-top: 10vh;
+    flex-direction: column;
+  }
+  .menu ul li {
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgb(56, 54, 54);
+  }
+  .menu ul li a {
+    border: none;
+    font-size: 2rem;
+  }
 
-    .sobremi {
-        padding: 0;
-        margin: 8px 0;
-    }
+  .menu.open {
+    transform: translateX(0);
+  }
 
-    aside {
-        text-align: justify;
-        color: white;
-        padding: 20px;
-        padding-bottom: 30vh;
-        background-image: url(../img/cuadroybelen.jpg);
-        background-size: cover;
-    }
+  /* INDEX */
+  .imagenindex {
+    display: none;
+  }
 
-    aside h2 {
-        text-align: center;
-    }
+  .sobremi {
+    padding: 0;
+    margin: 8px 0;
+  }
 
-    .gridInicio {
-        grid-template-columns: 1fr;
-        margin: 15px 10px;
-    }
+  aside {
+    text-align: justify;
+    color: white;
+    padding: 20px;
+    padding-bottom: 30vh;
+    background-image: url(../img/cuadroybelen.jpg);
+    background-size: cover;
+  }
+  aside h2 {
+    text-align: center;
+  }
 
-    .gridGaleria {
-        /* grid-template-columns: 1fr; */
-        /* row-gap: 10px; */
-        margin: 0;
-    }
+  .gridInicio {
+    grid-template-columns: 1fr;
+    margin: 15px 10px;
+  }
 
-    .img {
-        min-height: 40vh;
-    }
+  .gridGaleria {
+    /* grid-template-columns: 1fr; */
+    /* row-gap: 10px; */
+    margin: 0;
+  }
 
-    /* footer pantallas chicas */
-    footer .row {
-        display: block;
-    }
+  .img {
+    min-height: 40vh;
+  }
 
-    footer .columna33 {
-        width: 100%;
-        justify-content: center;
-    }
+  /* contacto */
+  .fieldsetContacto {
+    width: 95%;
+    margin: auto;
+  }
 
-    footer .columna33 ul {
-        justify-content: center;
-        padding: 0;
-    }
+  .formContacto {
+    width: 100%;
+  }
 
-    /* header */
-    .menu {
-        display: none;
-    }
+  .formContacto .contactoLinea input {
+    width: 100%;
+  }
 
-    /* contacto */
-    .fieldsetContacto {
-        width: 95%;
-        margin: auto;
-    }
+  .contactoLinea {
+    display: contents;
+  }
 
-    .formContacto {
-        width: 100%;
-    }
+  /* MEDIA SERVICIOS */
+  .gridServicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+  }
 
-    .formContacto .contactoLinea input {
-        width: 100%;
-    }
+  #talleres {
+    height: 100vh;
+    background-image: url(../img/taller.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
 
-    .contactoLinea {
-        display: contents;
-    }
+  #pedidos {
+    height: 100vh;
+    background-image: url(../img/perros4.jpg);
+    background-position: center;
+    background-size: cover;
+  }
 
-    /* MEDIA SERVICIOS */
-    #talleres {
-        height: 100vh;
-        background-image: url(../img/taller.jpeg);
-        background-position: center;
-        background-size: cover;
-    }
+  #acrilicos {
+    height: 100vh;
+    background-image: url(../img/acrilico.jpeg);
+    background-position: center;
+    background-size: cover;
+    filter: contrast(100%);
+  }
 
-    #pedidos {
-        height: 100vh;
-        background-image: url(../img/perros4.jpg);
-        background-position: center;
-        background-size: cover;
-    }
+  #murales {
+    height: 100vh;
+    background-image: url(../img/mural.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: contrast(100%);
+  }
 
-    #acrilicos {
-        height: 100vh;
-        background-image: url(../img/acrilico.jpeg);
-        background-position: center;
-        background-size: cover;
-        filter: contrast(100%);
-    }
+  #mates {
+    height: 100vh;
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
+    background-position: center;
+    background-size: cover;
+  }
 
-    #murales {
-        height: 100vh;
-        background-image: url(../img/mural.jpg);
-        background-position: center;
-        background-size: cover;
-        filter: contrast(100%);
-    }
+  #estampitas {
+    height: 100vh;
+    background-size: cover;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
+  }
 
-    #mates {
-        height: 100vh;
-        background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
-        background-position: center;
-        background-size: cover;
-    }
+  .serviciosSection img {
+    display: none;
+  }
 
-    #estampitas {
-        height: 100vh;
-        background-size: cover;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
-    }
+  .serviciosSection p,
+.serviciosSection h2 {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 
-    .serviciosSection img {
-        display: none;
-    }
+  /* footer pantallas chicas */
+  footer .row {
+    display: block;
+  }
 
-    .serviciosSection p,
-    .serviciosSection h2 {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
+  footer .columna33 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  footer .columna33 ul {
+    justify-content: center;
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

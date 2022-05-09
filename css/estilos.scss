@@ -92,7 +92,7 @@ header {
 }
 
 
-header nav a {
+header a {
     text-decoration: none;
     color: map-get($colores, c1);
     font-size: 18px;
@@ -102,7 +102,7 @@ header nav a {
     z-index: 2;
 }
 
-header a:hover {
+header nav a:hover {
     border-top: 1px solid map-get($colores, c1);
     border-bottom: 1px solid map-get($colores, c1);
     transition: all 0.4s;
@@ -732,43 +732,43 @@ fieldset form input {
     /* header */
     .hamb {
         margin-right: 16px;
+        display:block;
+        font-size: 30px;
+        position: relative;
+        z-index: 4;
+        color: map-get($colores, c1 );
+        a{
+            text-decoration: none;
+        }
     }
 
     .menu {
         position: fixed;
-        width: 220px;
+        width: 50vw;
         height: 100%;
         background-color: white;
         padding-top: 20px;
         top: 0;
         right: 0;
-        transition: all 1.8s ease;
+        transition: all .8s ease;
         transform: translateX(100%);
+        z-index: 8;
+        ul {
+            flex-direction: column;
+            li {
+                margin-bottom: 50px;
+                border-bottom: 1px solid map-get($colores, c1);
+                a{
+                border: none;
+                font-size: 2rem;
+                }
+            }
+        }   
     }
-
-    header .menu .Xmenu {
-        padding-left: 70%;
+    .menu.open{
+        transform: translateX(0);
     }
-
-    header .menu .Xmenu a {
-        color: black;
-        background-color: transparent;
-    }
-
-    .menu ul {
-        flex-direction: column;
-    }
-
-    .menu ul li {
-        padding-bottom: 20px;
-    }
-
-    .menu ul li a {
-        background-color: transparent;
-        color: black;
-        border-bottom: solid 1px black;
-    }
-
+ 
     /* CONTACTO */
     .fieldsetContacto {
         width: 90%;
@@ -792,6 +792,44 @@ fieldset form input {
 }
 
 @media only screen and (max-width:576px) {
+        /* header */
+        .hamb {
+            margin-right: 16px;
+            display:block;
+            font-size: 30px;
+            position: relative;
+            z-index: 4;
+            color: map-get($colores, c1 );
+            a{
+                text-decoration: none;
+            }
+        }
+        .menu {
+            position: fixed;
+            width: 80vw;
+            height: 100%;
+            background-color: white;
+            padding-top: 20px;
+            top: 0;
+            right: 0;
+            transition: all .8s ease;
+            transform: translateX(100%);
+            z-index: 8;
+            ul {
+                margin-top: 10vh;
+                flex-direction: column;
+                li {
+                    margin-bottom: 50px;
+                    border-bottom: 1px solid map-get($colores, c1);
+                    a{
+                        border: none;
+                        font-size: 2rem;
+                    }
+            }   }
+        }
+        .menu.open{
+            transform: translateX(0);
+        }
 
     /* INDEX */
     .imagenindex {
@@ -832,32 +870,14 @@ fieldset form input {
         min-height: 40vh;
     }
 
-    /* footer pantallas chicas */
-    footer .row {
-        display: block;
-    }
-
-    footer .columna33 {
-        width: 100%;
-        justify-content: center;
-    }
-
-    footer .columna33 ul {
-        justify-content: center;
-        padding: 0;
-    }
-
-    /* header */
-    .menu {
-        display: none;
-    }
-
+    
+    
     /* contacto */
     .fieldsetContacto {
         width: 95%;
         margin: auto;
     }
-
+    
     .formContacto {
         width: 100%;
     }
@@ -871,6 +891,11 @@ fieldset form input {
     }
 
     /* MEDIA SERVICIOS */
+    .gridServicios{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 5px;
+    }
     #talleres {
         height: 100vh;
         background-image: url(../img/taller.jpeg);
@@ -900,7 +925,7 @@ fieldset form input {
         background-size: cover;
         filter: contrast(100%);
     }
-
+    
     #mates {
         height: 100vh;
         background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 70%), url(../img/mates.jpg);
@@ -914,12 +939,28 @@ fieldset form input {
         background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 80%), url(../img/estampitas.jpeg);
     }
 
+
     .serviciosSection img {
         display: none;
     }
-
+    
     .serviciosSection p,
     .serviciosSection h2 {
         background-color: rgba(255, 255, 255, .2);
+    }
+
+    /* footer pantallas chicas */
+    footer .row {
+        display: block;
+    }
+
+    footer .columna33 {
+        width: 100%;
+        justify-content: center;
+    }
+
+    footer .columna33 ul {
+        justify-content: center;
+        padding: 0;
     }
 }

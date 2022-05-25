@@ -183,13 +183,13 @@ footer .columnaredes ul li {
 
 /* FIN FOOTER */
 /*INICIO PAGINA INDEX*/
-.carousel-item {
-  max-height: 60vh;
+h1 {
+  display: none;
 }
 
 .carousel-item img {
+  max-height: 400px;
   width: 100%;
-  height: 60vh;
 }
 
 .carousel-indicators li {
@@ -615,14 +615,16 @@ h2 {
 
   /* MEDIA GALERIA */
   .gridGaleria {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(7, 50vh);
-    grid-template-areas: "perro1 perro2" "caballo castillo" "casa estacion" "BsAs BsAs" "mural scooter" "mural cancha1" "cancha2 cancha3";
+    grid-gap: 3px;
+    grid-template-areas: "perro1 perro2" "caballo castillo" "casa estacion" "BsAs BsAs" "mural scooter" "mural cancha1" "cancha2 cancha3" "cancha4 velero";
   }
 
   .img {
     background-size: cover;
+    width: 100%;
   }
 
   /* MEDIA SERVICIOS */
@@ -647,7 +649,7 @@ h2 {
 
   #pedidos {
     height: 100vh;
-    background-image: url(../img/perros4.jpg);
+    background-image: url(../img/Flores\ paris\ 1.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -685,9 +687,9 @@ h2 {
     display: none;
   }
 
-  .serviciosSection p,
-h2 {
-    background-color: rgba(255, 255, 255, 0.2);
+  .serviciosSection .descServ {
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.378) 30%, rgba(255, 255, 255, 0));
   }
 
   /* footer pantallas chicas */
@@ -842,7 +844,7 @@ h2 {
   }
 
   .img {
-    min-height: 40vh;
+    width: 100%;
   }
 
   /* contacto */
@@ -879,7 +881,7 @@ h2 {
 
   #pedidos {
     height: 100vh;
-    background-image: url(../img/perros4.jpg);
+    background-image: url(../img/Flores\ paris\ 1.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -917,9 +919,9 @@ h2 {
     display: none;
   }
 
-  .serviciosSection p,
-.serviciosSection h2 {
-    background-color: rgba(255, 255, 255, 0.2);
+  .serviciosSection .descServ {
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.378) 30%, rgba(255, 255, 255, 0));
   }
 
   /* footer pantallas chicas */

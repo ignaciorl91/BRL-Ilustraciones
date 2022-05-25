@@ -199,14 +199,14 @@ footer .columnaredes ul li {
 
 
 /*INICIO PAGINA INDEX*/
-.carousel-item {
-    max-height: 60vh;
+h1{
+    display: none;
 }
 
 .carousel-item img {
+    max-height: 400px;
     width: 100%;
-    height: 60vh;
-}
+ }
 
 .carousel-indicators li {
 
@@ -626,10 +626,13 @@ fieldset form input {
     }
 
     /* MEDIA GALERIA */
+   
     .gridGaleria {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(7, 50vh);
+        grid-gap: 3px;
+
         grid-template-areas:
             "perro1 perro2"
             "caballo castillo"
@@ -637,11 +640,13 @@ fieldset form input {
             "BsAs BsAs"
             "mural scooter"
             "mural cancha1"
-            "cancha2 cancha3";
+            "cancha2 cancha3"
+            "cancha4 velero";
     }
 
     .img {
         background-size: cover;
+        width: 100%;
     }
 
     /* MEDIA SERVICIOS */
@@ -671,7 +676,7 @@ fieldset form input {
 
     #pedidos {
         height: 100vh;
-        background-image: url(../img/perros4.jpg);
+        background-image: url(../img/Flores\ paris\ 1.jpg);
         background-position: center;
         background-size: cover;
     }
@@ -709,9 +714,9 @@ fieldset form input {
         display: none;
     }
 
-    .serviciosSection p,
-    h2 {
-        background-color: rgba(255, 255, 255, .2);
+    .serviciosSection .descServ{
+        width: 100%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.378)30%, rgba(255,255,255,0));
     }
 
     /* footer pantallas chicas */
@@ -867,7 +872,8 @@ fieldset form input {
     }
 
     .img {
-        min-height: 40vh;
+        // min-height: 40vh;
+        width: 100%;
     }
 
     
@@ -906,7 +912,7 @@ fieldset form input {
 
     #pedidos {
         height: 100vh;
-        background-image: url(../img/perros4.jpg);
+        background-image: url(../img/Flores\ paris\ 1.jpg);
         background-position: center;
         background-size: cover;
     }
@@ -943,10 +949,9 @@ fieldset form input {
     .serviciosSection img {
         display: none;
     }
-    
-    .serviciosSection p,
-    .serviciosSection h2 {
-        background-color: rgba(255, 255, 255, .2);
+    .serviciosSection .descServ{
+        width: 100%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.378)30%, rgba(255,255,255,0));
     }
 
     /* footer pantallas chicas */
